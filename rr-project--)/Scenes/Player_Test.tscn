@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://lmt1kg8tllym"]
+[gd_scene load_steps=6 format=3 uid="uid://lmt1kg8tllym"]
 
 [ext_resource type="PackedScene" uid="uid://csh3ima41r61x" path="res://Scenes/Player.tscn" id="1_abkwn"]
+[ext_resource type="PackedScene" uid="uid://ce5nsrymyls6u" path="res://Scenes/picture_frame.tscn" id="3_6ubf0"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_abkwn"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -29,4 +30,77 @@ transform = Transform3D(11.302201, 0, 0, 0, 1, 0, 0, 0, 10.801428, 0, 0.01976427
 use_collision = true
 size = Vector3(1, 0.001, 1)
 
-[node name="Player" parent="." instance=ExtResource("1_abkwn")]
+[node name="Player" parent="." node_paths=PackedStringArray("inspect_ui", "inspect_label") instance=ExtResource("1_abkwn")]
+inspect_ui = NodePath("../PictureFormat2/CanvasLayer")
+inspect_label = NodePath("../PictureFormat2/CanvasLayer/Control/ColorRect/Label")
+
+[node name="PictureFormat" type="Node3D" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="PictureFormat"]
+visible = false
+
+[node name="Control" type="Control" parent="PictureFormat/CanvasLayer"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="PictureFormat/CanvasLayer/Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="PictureFormat/CanvasLayer/Control/ColorRect"]
+layout_mode = 0
+offset_left = -25.0
+offset_top = 56.0
+offset_right = 66.0
+offset_bottom = 79.0
+text = "Hello World"
+
+[node name="PictureFormat2" type="Node3D" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="PictureFormat2"]
+visible = false
+
+[node name="Control" type="Control" parent="PictureFormat2/CanvasLayer"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="PictureFormat2/CanvasLayer/Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="PictureFormat2/CanvasLayer/Control/ColorRect"]
+layout_mode = 0
+offset_left = -25.0
+offset_top = 56.0
+offset_right = 66.0
+offset_bottom = 79.0
+text = "Hello World"
+
+[node name="Picture Frame_1" parent="." instance=ExtResource("3_6ubf0")]
+description_text = "Photograph 1"
+
+[node name="Picture Frame_22" parent="." instance=ExtResource("3_6ubf0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9467888, 0.020264238, -1.2677112)
+description_text = "Photograph 2"
