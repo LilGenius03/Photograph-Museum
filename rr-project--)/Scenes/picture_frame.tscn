@@ -1,7 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://ce5nsrymyls6u"]
 
 [ext_resource type="Script" uid="uid://tx4uaj5f64o1" path="res://Scenes/picture_Interaction.gd" id="1_0tgqo"]
-[ext_resource type="Texture2D" uid="uid://drx4jgvrsxmct" path="res://icon.svg" id="2_y5xxf"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_fggwd"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_fn3tt"]
 
@@ -13,7 +14,7 @@ radius = 1.4814891
 [node name="Picture Frame" type="Node3D" groups=["Player"]]
 script = ExtResource("1_0tgqo")
 description_text = "Works of Art"
-image_texture = ExtResource("2_y5xxf")
+image_texture = SubResource("CanvasTexture_fggwd")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -3)
