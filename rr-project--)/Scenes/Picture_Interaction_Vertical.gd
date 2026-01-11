@@ -2,32 +2,32 @@ extends Node3D
 @export var description_text: String 
 @export var image_texture: Texture2D
 
-@onready var picture_mesh_Horizontal: MeshInstance3D = $PictureMesh_Horizontal
+@onready var picture_mesh_Vertical: MeshInstance3D = $PictureMesh_Vertical
 var player_in_range := false
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	update_picture_texture_Horizontal()
 
-func update_picture_texture_Horizontal():
+func _ready():
+	update_picture_texture_Vertical()
+
+func update_picture_texture_Vertical():
 	if image_texture == null:
 		return
 
-	if picture_mesh_Horizontal == null:
+	if picture_mesh_Vertical == null:
 		push_error("PictureMesh_Horizontal not found")
 		return
 	
 
-	var material := picture_mesh_Horizontal.get_surface_override_material(0)
+	var material := picture_mesh_Vertical.get_surface_override_material(0)
 
 	if material == null:
-		var base_material := picture_mesh_Horizontal.mesh.surface_get_material(0)
+		var base_material := picture_mesh_Vertical.mesh.surface_get_material(0)
 
 		if base_material:
 			material = base_material.duplicate()
 		else:
 			material = StandardMaterial3D.new()
 
-		picture_mesh_Horizontal.set_surface_override_material(0, material)
+		picture_mesh_Vertical.set_surface_override_material(1, material)
 
 	material.albedo_texture = image_texture
 

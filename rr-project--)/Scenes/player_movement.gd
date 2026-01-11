@@ -18,22 +18,32 @@ const FOV_CHANGE = 1.5
 
 @onready var head = $Head
 @onready var camera = $Head/Camera3D
-@export var inspect_ui: CanvasLayer
+@export var inspect_ui: Control
 @export var inspect_label: Label
+@export var PressF_label: Control
+@export var inspect_image : TextureRect
+
+func show_inspection_prompt():
+	if not inspecting:
+		PressF_label.visible = true
+
+func hide_inspection_prompt():
+	PressF_label.visible = false
 
 func enter_inspect_mode(target):
 	inspecting = true
 
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-
+	
+	PressF_label.visible = false
 	inspect_ui.visible = true
 	inspect_label.text = target.description_text
+	inspect_image.texture = target.image_texture
 
 func exit_inspect_mode():
 	inspecting = false
 
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-
 	inspect_ui.visible = false
 
 func _ready():
