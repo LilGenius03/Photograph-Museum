@@ -1,33 +1,80 @@
-[gd_scene format=3 uid="uid://be2po12ge3fgd"]
+[gd_scene load_steps=2 format=3 uid="uid://be2po12ge3fgd"]
+
+[ext_resource type="Script" uid="uid://cfmet218xxrv2" path="res://Scenes/PictureFormat.gd" id="1_1f6b4"]
 
 [node name="PictureFormat" type="Node3D"]
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-visible = false
+[node name="PictureCanvas" type="CanvasLayer" parent="."]
 
-[node name="Control" type="Control" parent="CanvasLayer"]
+[node name="PressF" type="Control" parent="PictureCanvas"]
+visible = false
 layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Press F to Inspect" type="Label" parent="PictureCanvas/PressF"]
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
+offset_left = -67.5
+offset_top = -11.5
+offset_right = 67.5
+offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_color = Color(0.8350884, 0.07665766, 0.48068243, 1)
+text = "Press F to Inspect"
+horizontal_alignment = 1
 
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="PictureFormat" type="Control" parent="PictureCanvas"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1152.0
+offset_bottom = -648.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1f6b4")
 
-[node name="Label" type="Label" parent="CanvasLayer/Control/ColorRect"]
-layout_mode = 0
-offset_left = -25.0
-offset_top = 56.0
-offset_right = 66.0
-offset_bottom = 79.0
+[node name="Background" type="ColorRect" parent="PictureCanvas/PictureFormat"]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.015686275, 0.015686275, 0.015686275, 0.44313726)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PictureCanvas/PictureFormat"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -0.5
+offset_top = -132.5
+offset_right = 0.5
+offset_bottom = 132.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 16
+
+[node name="TextureRect" type="TextureRect" parent="PictureCanvas/PictureFormat/VBoxContainer"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+expand_mode = 2
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="PictureCanvas/PictureFormat/VBoxContainer"]
+layout_mode = 2
 text = "Hello World"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2

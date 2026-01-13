@@ -1,11 +1,11 @@
 [gd_scene load_steps=11 format=3 uid="uid://bjtin1vqe3th7"]
 
+[ext_resource type="Script" uid="uid://cfmet218xxrv2" path="res://Scenes/PictureFormat.gd" id="1_nwqag"]
 [ext_resource type="PackedScene" uid="uid://cieps3eksxxkm" path="res://3D Assets/The Building.glb" id="1_ptlmm"]
 [ext_resource type="PackedScene" uid="uid://csh3ima41r61x" path="res://Scenes/Player.tscn" id="2_y36bi"]
-[ext_resource type="PackedScene" uid="uid://xwahwqi8uha3" path="res://Picture Frames/picture_frame_Horizontal.tscn" id="3_q2tkb"]
+[ext_resource type="PackedScene" uid="uid://xwahwqi8uha3" path="res://Picture Frames/PictureFrame.tscn" id="3_q2tkb"]
 [ext_resource type="Texture2D" uid="uid://cxuj5a65puwq" path="res://Test Images/horizontal image.jpg" id="4_vufhw"]
 [ext_resource type="Texture2D" uid="uid://dqlqkxw67jij" path="res://Test Images/choice-variation-concept.webp" id="5_nwqag"]
-[ext_resource type="PackedScene" uid="uid://bk8orhl2rrc2m" path="res://Picture Frames/picture_frame_Vertical.tscn" id="5_vufhw"]
 [ext_resource type="Texture2D" uid="uid://7oou4gywocn0" path="res://Test Images/Vertical Image.jpg" id="6_yl61k"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_y36bi"]
@@ -53,68 +53,47 @@ theme_override_colors/font_color = Color(0.8350884, 0.07665766, 0.48068243, 1)
 text = "Press F to Inspect"
 horizontal_alignment = 1
 
-[node name="Control" type="Control" parent="PictureFormat/PictureCanvas"]
+[node name="PictureFormat" type="Control" parent="PictureFormat/PictureCanvas"]
 visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = -1152.0
+offset_bottom = -648.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_nwqag")
 
-[node name="Background" type="ColorRect" parent="PictureFormat/PictureCanvas/Control"]
+[node name="Background" type="ColorRect" parent="PictureFormat/PictureCanvas/PictureFormat"]
 z_index = -1
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -556.0
-offset_top = -305.0
-offset_right = 557.0
-offset_bottom = 306.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.015686275, 0.015686275, 0.015686275, 0.44313726)
 
-[node name="Picture" type="ColorRect" parent="PictureFormat/PictureCanvas/Control"]
+[node name="VBoxContainer" type="VBoxContainer" parent="PictureFormat/PictureCanvas/PictureFormat"]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(1, 1, 1, 0)
+offset_top = 135.0
+offset_right = 1152.0
+offset_bottom = 783.0
+theme_override_constants/separation = 16
 
-[node name="TextureRect" type="TextureRect" parent="PictureFormat/PictureCanvas/Control/Picture"]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -20.0
-offset_top = -181.045
-offset_right = 20.0
-offset_bottom = -141.045
-grow_horizontal = 2
+[node name="TextureRect" type="TextureRect" parent="PictureFormat/PictureCanvas/PictureFormat/VBoxContainer"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+expand_mode = 2
 stretch_mode = 5
 
-[node name="Label" type="Label" parent="PictureFormat/PictureCanvas/Control/Picture"]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -142.25
-offset_top = 117.185
-offset_right = 142.25
-offset_bottom = 226.04498
-grow_horizontal = 2
+[node name="Label" type="Label" parent="PictureFormat/PictureCanvas/PictureFormat/VBoxContainer"]
+layout_mode = 2
 text = "Hello World"
 horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_ogldg")
@@ -128,20 +107,21 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15628046, 0, -4.86074)
 
 [node name="Player" parent="." node_paths=PackedStringArray("inspect_ui", "inspect_label", "PressF_label", "inspect_image") instance=ExtResource("2_y36bi")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0.5663051, 0.945699, -7.290141)
-inspect_ui = NodePath("../PictureFormat/PictureCanvas/Control")
-inspect_label = NodePath("../PictureFormat/PictureCanvas/Control/Picture/Label")
+inspect_ui = NodePath("../PictureFormat/PictureCanvas/PictureFormat")
+inspect_label = NodePath("../PictureFormat/PictureCanvas/PictureFormat/VBoxContainer/Label")
 PressF_label = NodePath("../PictureFormat/PictureCanvas/PressF")
-inspect_image = NodePath("../PictureFormat/PictureCanvas/Control/Picture/TextureRect")
+inspect_image = NodePath("../PictureFormat/PictureCanvas/PictureFormat/VBoxContainer/TextureRect")
 
-[node name="Picture Frame Horizontal" parent="." instance=ExtResource("3_q2tkb")]
-transform = Transform3D(-8.742278e-08, 0, 2, 0, 2, 0, -2, 0, -8.742278e-08, 9.1562805, 2.5754595, -18.577042)
-image_texture = ExtResource("5_nwqag")
-
-[node name="Picture Frame Horizontal2" parent="." instance=ExtResource("3_q2tkb")]
-transform = Transform3D(-8.742278e-08, 0, 2, 0, 2, 0, -2, 0, -8.742278e-08, 9.1562805, 2.5754595, -22.951675)
+[node name="Picture_Frame" parent="." instance=ExtResource("3_q2tkb")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 9, 4, -18)
 image_texture = ExtResource("4_vufhw")
 
-[node name="Picture Frame Vertical" parent="." instance=ExtResource("5_vufhw")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -8.499012, 2.815308, -19)
-description_text = "please work"
+[node name="Picture_Frame2" parent="." instance=ExtResource("3_q2tkb")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 9, 4, -22)
+description_text = "Beautiful girl"
 image_texture = ExtResource("6_yl61k")
+
+[node name="Picture_Frame3" parent="." instance=ExtResource("3_q2tkb")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 9, 4, -24.70343)
+description_text = "Beautiful girl"
+image_texture = ExtResource("5_nwqag")

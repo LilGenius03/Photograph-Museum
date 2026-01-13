@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://4i4vd2ocniiv"
-path="res://.godot/imported/Picture Frame Horizontal .glb-055f0b814501a9099bf27bb0f851d174.scn"
+uid="uid://cmqb8h5k2s4p"
+path="res://.godot/imported/Picture Frame .glb-f8032145300abcc5963e20f69a2d2419.scn"
 
 [deps]
 
-source_file="res://3D Assets/Picture Frame Horizontal .glb"
-dest_files=["res://.godot/imported/Picture Frame Horizontal .glb-055f0b814501a9099bf27bb0f851d174.scn"]
+source_file="res://3D Assets/Picture Frame .glb"
+dest_files=["res://.godot/imported/Picture Frame .glb-f8032145300abcc5963e20f69a2d2419.scn"]
 
 [params]
 
