@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://qjw7v6pmdjf2"]
+
+[ext_resource type="Shader" uid="uid://c5ahvkyqdw88h" path="res://Materials/toon_shader.gdshader" id="1_jqttu"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7vbfr"]
+render_priority = 0
+shader = ExtResource("1_jqttu")
+shader_parameter/main_color = Color(0, 0.42745036, 0.4322538, 1)
+shader_parameter/shade_low = 0.258000012255
+shader_parameter/shade_high = 0.2690000127775
+shader_parameter/brightness = 2.94800014003
+
+[node name="Node3D" type="Node3D"]
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="."]
+radial_segments = 15
+rings = 10
+material = SubResource("ShaderMaterial_7vbfr")

@@ -1,12 +1,14 @@
-[gd_scene load_steps=11 format=3 uid="uid://bjtin1vqe3th7"]
+[gd_scene load_steps=14 format=3 uid="uid://bjtin1vqe3th7"]
 
 [ext_resource type="Script" uid="uid://cfmet218xxrv2" path="res://Scenes/PictureFormat.gd" id="1_nwqag"]
-[ext_resource type="PackedScene" uid="uid://cieps3eksxxkm" path="res://3D Assets/The Building.glb" id="1_ptlmm"]
 [ext_resource type="PackedScene" uid="uid://csh3ima41r61x" path="res://Scenes/Player.tscn" id="2_y36bi"]
 [ext_resource type="PackedScene" uid="uid://xwahwqi8uha3" path="res://Picture Frames/PictureFrame.tscn" id="3_q2tkb"]
 [ext_resource type="Texture2D" uid="uid://cxuj5a65puwq" path="res://Test Images/horizontal image.jpg" id="4_vufhw"]
 [ext_resource type="Texture2D" uid="uid://dqlqkxw67jij" path="res://Test Images/choice-variation-concept.webp" id="5_nwqag"]
 [ext_resource type="Texture2D" uid="uid://7oou4gywocn0" path="res://Test Images/Vertical Image.jpg" id="6_yl61k"]
+[ext_resource type="Shader" uid="uid://cji6v3efgg4wv" path="res://Picture Frames/Material/post_process.gdshader" id="8_hvgs0"]
+[ext_resource type="PackedScene" uid="uid://br3chl1eajpp3" path="res://Scenes/the_building.tscn" id="9_hvgs0"]
+[ext_resource type="Script" uid="uid://c0tvhpayxfwk2" path="res://Scenes/Style_Switch.gd" id="9_iwebx"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_y36bi"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -21,7 +23,12 @@ sky = SubResource("Sky_q2tkb")
 tonemap_mode = 2
 glow_enabled = true
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pba03"]
+shader = ExtResource("8_hvgs0")
+shader_parameter/style = 0
+
 [node name="The Museum" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 3, -6)
 
 [node name="PictureFormat" type="Node3D" parent="."]
 
@@ -102,9 +109,6 @@ environment = SubResource("Environment_ogldg")
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
 shadow_enabled = true
 
-[node name="The Building" parent="." instance=ExtResource("1_ptlmm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15628046, 0, -4.86074)
-
 [node name="Player" parent="." node_paths=PackedStringArray("inspect_ui", "inspect_label", "PressF_label", "inspect_image") instance=ExtResource("2_y36bi")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0.5663051, 0.945699, -7.290141)
 inspect_ui = NodePath("../PictureFormat/PictureCanvas/PictureFormat")
@@ -113,15 +117,31 @@ PressF_label = NodePath("../PictureFormat/PictureCanvas/PressF")
 inspect_image = NodePath("../PictureFormat/PictureCanvas/PictureFormat/VBoxContainer/TextureRect")
 
 [node name="Picture_Frame" parent="." instance=ExtResource("3_q2tkb")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 9, 4, -18)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 8.923044, 4, -13)
 image_texture = ExtResource("4_vufhw")
 
 [node name="Picture_Frame2" parent="." instance=ExtResource("3_q2tkb")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 9, 4, -22)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 8.923044, 4, -17)
 description_text = "Beautiful girl"
 image_texture = ExtResource("6_yl61k")
 
 [node name="Picture_Frame3" parent="." instance=ExtResource("3_q2tkb")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 9, 4, -24.70343)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 8.923044, 4, -19.70343)
 description_text = "Beautiful girl"
 image_texture = ExtResource("5_nwqag")
+
+[node name="PostProcess" type="Node3D" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="PostProcess"]
+
+[node name="ColorRect" type="ColorRect" parent="PostProcess/CanvasLayer"]
+material = SubResource("ShaderMaterial_pba03")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("9_iwebx")
+
+[node name="The Building" parent="." instance=ExtResource("9_hvgs0")]

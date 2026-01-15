@@ -1,0 +1,183 @@
+[gd_scene load_steps=20 format=3 uid="uid://br3chl1eajpp3"]
+
+[ext_resource type="PackedScene" uid="uid://cieps3eksxxkm" path="res://3D Assets/The Building.glb" id="1_abo5s"]
+[ext_resource type="Shader" uid="uid://c5ahvkyqdw88h" path="res://Materials/toon_shader.gdshader" id="2_ixj0m"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_aeyuf"]
+render_priority = 0
+shader = ExtResource("2_ixj0m")
+shader_parameter/main_color = Color(0.017572308, 0.018950948, 0.015847582, 1)
+shader_parameter/shade_low = 0.05
+shader_parameter/shade_high = 0.15
+shader_parameter/brightness = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_16htk"]
+render_priority = 0
+shader = ExtResource("2_ixj0m")
+shader_parameter/main_color = Color(0.015686275, 0.019607844, 0.015686275, 1)
+shader_parameter/shade_low = 0.05
+shader_parameter/shade_high = 0.15
+shader_parameter/brightness = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vvkum"]
+render_priority = 0
+shader = ExtResource("2_ixj0m")
+shader_parameter/main_color = Color(0.015686275, 0.019607844, 0.015686275, 1)
+shader_parameter/shade_low = 0.05
+shader_parameter/shade_high = 0.15
+shader_parameter/brightness = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6j7q2"]
+render_priority = 0
+shader = ExtResource("2_ixj0m")
+shader_parameter/main_color = Color(0.015686275, 0.019607844, 0.015686275, 1)
+shader_parameter/shade_low = 0.05
+shader_parameter/shade_high = 0.15
+shader_parameter/brightness = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ob77i"]
+render_priority = 0
+shader = ExtResource("2_ixj0m")
+shader_parameter/main_color = Color(0.2552938, 0.16991964, 0.027089983, 1)
+shader_parameter/shade_low = 0.030000001425
+shader_parameter/shade_high = 0.1230000058425
+shader_parameter/brightness = 1.022000048545
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0dsmk"]
+render_priority = 0
+shader = ExtResource("2_ixj0m")
+shader_parameter/main_color = Color(0.6901961, 0.70980394, 0.73333335, 1)
+shader_parameter/shade_low = 0.05
+shader_parameter/shade_high = 0.15
+shader_parameter/brightness = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ixj0m"]
+render_priority = 0
+shader = ExtResource("2_ixj0m")
+shader_parameter/main_color = Color(0.6666667, 0.6862745, 0.70980394, 1)
+shader_parameter/shade_low = 0.05
+shader_parameter/shade_high = 0.15
+shader_parameter/brightness = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_171vo"]
+render_priority = 0
+shader = ExtResource("2_ixj0m")
+shader_parameter/main_color = Color(0.6901961, 0.70980394, 0.73333335, 1)
+shader_parameter/shade_low = 0.05
+shader_parameter/shade_high = 0.15
+shader_parameter/brightness = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vghge"]
+render_priority = 0
+shader = ExtResource("2_ixj0m")
+shader_parameter/main_color = Color(0.8041438, 0.52825886, 0.30287543, 1)
+shader_parameter/shade_low = 0.13200000627
+shader_parameter/shade_high = 0.24800001178
+shader_parameter/brightness = 1.6090000764274999
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ve4mk"]
+render_priority = 0
+shader = ExtResource("2_ixj0m")
+shader_parameter/main_color = Color(0.63529414, 0.63529414, 0.59607846, 1)
+shader_parameter/shade_low = 0.05
+shader_parameter/shade_high = 0.15
+shader_parameter/brightness = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4hdjy"]
+render_priority = 0
+shader = ExtResource("2_ixj0m")
+shader_parameter/main_color = Color(0.6918293, 0.675851, 0.64942366, 1)
+shader_parameter/shade_low = 0.05
+shader_parameter/shade_high = 0.15
+shader_parameter/brightness = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7rk82"]
+render_priority = 0
+shader = ExtResource("2_ixj0m")
+shader_parameter/main_color = Color(0.74431896, 1.8289685e-06, 4.813075e-07, 1)
+shader_parameter/shade_low = 0.05
+shader_parameter/shade_high = 0.15
+shader_parameter/brightness = 0.630000029925
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gviws"]
+render_priority = 0
+shader = ExtResource("2_ixj0m")
+shader_parameter/main_color = Color(0.6362573, 0.5709266, 0.49869895, 1)
+shader_parameter/shade_low = 0.05
+shader_parameter/shade_high = 0.15
+shader_parameter/brightness = 0.9570000454575
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ejg4b"]
+render_priority = 0
+shader = ExtResource("2_ixj0m")
+shader_parameter/main_color = Color(0.31622136, 0.00062083855, 0.4536438, 1)
+shader_parameter/shade_low = 0.23200001102
+shader_parameter/shade_high = 0.254000012065
+shader_parameter/brightness = 0.50000002375
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_cjfyk"]
+render_priority = 0
+shader = ExtResource("2_ixj0m")
+shader_parameter/main_color = Color(0.4698441, 0.45994288, 0.416603, 1)
+shader_parameter/shade_low = 0.05
+shader_parameter/shade_high = 0.15
+shader_parameter/brightness = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_747uj"]
+render_priority = 0
+shader = ExtResource("2_ixj0m")
+shader_parameter/main_color = Color(0.2787621, 0.21134251, 0.04771109, 1)
+shader_parameter/shade_low = 0.05
+shader_parameter/shade_high = 0.15
+shader_parameter/brightness = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_abo5s"]
+render_priority = 0
+shader = ExtResource("2_ixj0m")
+shader_parameter/main_color = Color(0.8086565, 0.11176521, 0.44800615, 1)
+shader_parameter/shade_low = 0.0930000044175
+shader_parameter/shade_high = 0.12800000608
+shader_parameter/brightness = 1.130000053675
+
+[node name="The Building" instance=ExtResource("1_abo5s")]
+
+[node name="Pillar" parent="." index="0"]
+surface_material_override/0 = SubResource("ShaderMaterial_aeyuf")
+
+[node name="Pillar_001" parent="." index="1"]
+surface_material_override/0 = SubResource("ShaderMaterial_16htk")
+
+[node name="Pillar_002" parent="." index="2"]
+surface_material_override/0 = SubResource("ShaderMaterial_vvkum")
+
+[node name="Pillar_003" parent="." index="3"]
+surface_material_override/0 = SubResource("ShaderMaterial_6j7q2")
+
+[node name="Floor" parent="." index="4"]
+surface_material_override/0 = SubResource("ShaderMaterial_ob77i")
+surface_material_override/1 = SubResource("ShaderMaterial_0dsmk")
+
+[node name="Slop_Entrance" parent="." index="5"]
+surface_material_override/0 = SubResource("ShaderMaterial_ixj0m")
+
+[node name="Column_Supports" parent="." index="6"]
+surface_material_override/0 = SubResource("ShaderMaterial_171vo")
+
+[node name="Column" parent="." index="7"]
+surface_material_override/0 = SubResource("ShaderMaterial_vghge")
+
+[node name="Front Entrance" parent="." index="8"]
+surface_material_override/0 = SubResource("ShaderMaterial_ve4mk")
+
+[node name="Walls" parent="." index="9"]
+surface_material_override/0 = SubResource("ShaderMaterial_4hdjy")
+surface_material_override/1 = SubResource("ShaderMaterial_7rk82")
+surface_material_override/2 = SubResource("ShaderMaterial_gviws")
+surface_material_override/3 = SubResource("ShaderMaterial_ejg4b")
+
+[node name="Roof" parent="." index="10"]
+surface_material_override/0 = SubResource("ShaderMaterial_cjfyk")
+surface_material_override/1 = SubResource("ShaderMaterial_747uj")
+
+[node name="Love Heart" parent="." index="11"]
+surface_material_override/0 = SubResource("ShaderMaterial_abo5s")

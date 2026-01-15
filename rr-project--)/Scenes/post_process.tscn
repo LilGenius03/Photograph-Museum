@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://jvaixsi5jp3g"]
+
+[ext_resource type="Shader" uid="uid://cji6v3efgg4wv" path="res://Picture Frames/Material/post_process.gdshader" id="1_1mi1w"]
+[ext_resource type="Script" uid="uid://c0tvhpayxfwk2" path="res://Scenes/Style_Switch.gd" id="2_4fplf"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pba03"]
+shader = ExtResource("1_1mi1w")
+shader_parameter/style = 0
+
+[node name="PostProcess" type="Node3D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+material = SubResource("ShaderMaterial_pba03")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("2_4fplf")
