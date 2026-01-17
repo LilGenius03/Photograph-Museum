@@ -73,7 +73,7 @@ shader = ExtResource("2_ixj0m")
 shader_parameter/main_color = Color(0.8041438, 0.52825886, 0.30287543, 1)
 shader_parameter/shade_low = 0.13200000627
 shader_parameter/shade_high = 0.24800001178
-shader_parameter/brightness = 1.6090000764274999
+shader_parameter/brightness = 1.6090000764275
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ve4mk"]
 render_priority = 0

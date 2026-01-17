@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://jvaixsi5jp3g"]
+[gd_scene load_steps=5 format=3 uid="uid://jvaixsi5jp3g"]
 
 [ext_resource type="Shader" uid="uid://cji6v3efgg4wv" path="res://Picture Frames/Material/post_process.gdshader" id="1_1mi1w"]
 [ext_resource type="Script" uid="uid://c0tvhpayxfwk2" path="res://Scenes/Style_Switch.gd" id="2_4fplf"]
+[ext_resource type="AudioStream" uid="uid://bic1bllb0wpgc" path="res://Sounds/Sounds/Main Menu click sound.wav" id="3_4fplf"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_pba03"]
 shader = ExtResource("1_1mi1w")
@@ -20,3 +21,20 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("2_4fplf")
+
+[node name="Style Label" type="Label" parent="CanvasLayer"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 13.0
+offset_top = -84.0
+offset_right = 175.0
+offset_bottom = -11.0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 45
+text = "Hello world"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Style_Switch" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_4fplf")
