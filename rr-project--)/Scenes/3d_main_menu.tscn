@@ -1,0 +1,112 @@
+[gd_scene load_steps=10 format=3 uid="uid://hxrx1ywr8waw"]
+
+[ext_resource type="PackedScene" uid="uid://br3chl1eajpp3" path="res://Scenes/the_building.tscn" id="1_jujwo"]
+[ext_resource type="Script" uid="uid://c2jhumoh88lse" path="res://Scenes/main_menu.gd" id="2_4ua4o"]
+[ext_resource type="Shader" uid="uid://cji6v3efgg4wv" path="res://Picture Frames/Material/post_process.gdshader" id="3_cicbh"]
+[ext_resource type="Script" uid="uid://c0tvhpayxfwk2" path="res://Scenes/Style_Switch.gd" id="4_ir5th"]
+[ext_resource type="AudioStream" uid="uid://bic1bllb0wpgc" path="res://Sounds/Sounds/Main Menu click sound.wav" id="5_u6pmn"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_4ua4o"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_cicbh"]
+sky_material = SubResource("ProceduralSkyMaterial_4ua4o")
+
+[sub_resource type="Environment" id="Environment_ir5th"]
+background_mode = 2
+sky = SubResource("Sky_cicbh")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pba03"]
+shader = ExtResource("3_cicbh")
+shader_parameter/style = 0
+
+[node name="3D Main Menu" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_ir5th")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="The Building" parent="." instance=ExtResource("1_jujwo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
+
+[node name="Main Menu" type="Node2D" parent="."]
+script = ExtResource("2_4ua4o")
+
+[node name="Button_Manager" type="Control" parent="Main Menu"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Main Menu/Button_Manager"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 136.0
+offset_top = 254.0
+offset_right = 358.0
+offset_bottom = 395.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 24
+alignment = 1
+
+[node name="Start" type="Button" parent="Main Menu/Button_Manager/VBoxContainer"]
+layout_mode = 2
+text = "Start"
+
+[node name="StyleSwitch" type="Button" parent="Main Menu/Button_Manager/VBoxContainer"]
+layout_mode = 2
+text = "StyleSwitch (Also Press Tab)"
+
+[node name="Quit" type="Button" parent="Main Menu/Button_Manager/VBoxContainer"]
+layout_mode = 2
+text = "Quit"
+
+[node name="PostProcess" type="Node3D" parent="Main Menu"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Main Menu/PostProcess"]
+
+[node name="ScreenFilter" type="ColorRect" parent="Main Menu/PostProcess/CanvasLayer"]
+material = SubResource("ShaderMaterial_pba03")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("4_ir5th")
+
+[node name="Style Label" type="Label" parent="Main Menu/PostProcess/CanvasLayer"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 136.0
+offset_top = -80.0
+offset_right = 384.0
+offset_bottom = -7.0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 45
+text = "Hello world"
+vertical_alignment = 1
+
+[node name="Style_Switch" type="AudioStreamPlayer" parent="Main Menu/PostProcess"]
+stream = ExtResource("5_u6pmn")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.59719545, 0.33707374, 0.7278317, -0.037903238, 0.91825813, -0.3941641, -0.80119973, 0.2078058, 0.5611558, 9, 0.7390585, 8.43379)
+fov = 50.0
+
+[connection signal="pressed" from="Main Menu/Button_Manager/VBoxContainer/Start" to="Main Menu" method="_on_start_pressed"]
+[connection signal="pressed" from="Main Menu/Button_Manager/VBoxContainer/StyleSwitch" to="Main Menu" method="_on_style_switch_pressed"]
+[connection signal="pressed" from="Main Menu/Button_Manager/VBoxContainer/Quit" to="Main Menu" method="_on_quit_pressed"]

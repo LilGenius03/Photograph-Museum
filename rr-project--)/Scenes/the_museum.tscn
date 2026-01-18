@@ -111,20 +111,161 @@ inspect_label = NodePath("../PictureFormat/PictureCanvas/PictureFormat/VBoxConta
 PressF_label = NodePath("../PictureFormat/PictureCanvas/PressF")
 inspect_image = NodePath("../PictureFormat/PictureCanvas/PictureFormat/VBoxContainer/TextureRect")
 
-[node name="Picture_Frame" parent="." instance=ExtResource("3_q2tkb")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 8.923044, 4, -13)
-image_texture = ExtResource("4_vufhw")
-
-[node name="Picture_Frame2" parent="." instance=ExtResource("3_q2tkb")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 8.923044, 4, -17)
-description_text = "Beautiful girl"
-image_texture = ExtResource("6_yl61k")
-
-[node name="Picture_Frame3" parent="." instance=ExtResource("3_q2tkb")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 8.923044, 4, -19.70343)
-description_text = "Beautiful girl"
-image_texture = ExtResource("5_nwqag")
-
 [node name="PostProcess" parent="." instance=ExtResource("7_0xmwb")]
 
 [node name="The Building" parent="." instance=ExtResource("9_hvgs0")]
+
+[node name="PictureFramesGroup" type="Node3D" parent="."]
+
+[node name="Picture_Frame" parent="PictureFramesGroup" instance=ExtResource("3_q2tkb")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 8.923044, 4, -13)
+image_texture = ExtResource("4_vufhw")
+
+[node name="Picture_Frame2" parent="PictureFramesGroup" instance=ExtResource("3_q2tkb")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 8.923044, 4, -19)
+description_text = "Beautiful girl"
+image_texture = ExtResource("6_yl61k")
+
+[node name="Picture_Frame10" parent="PictureFramesGroup" instance=ExtResource("3_q2tkb")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, -8.901755, 4, -19)
+image_texture = ExtResource("4_vufhw")
+
+[node name="Picture_Frame11" parent="PictureFramesGroup" instance=ExtResource("3_q2tkb")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, -8.901755, 4, -13)
+description_text = "Beautiful girl"
+image_texture = ExtResource("6_yl61k")
+
+[node name="Picture_Frame20" parent="PictureFramesGroup" instance=ExtResource("3_q2tkb")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 8.923044, 4, -34)
+image_texture = ExtResource("4_vufhw")
+
+[node name="Picture_Frame21" parent="PictureFramesGroup" instance=ExtResource("3_q2tkb")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 8.923044, 4, -40)
+description_text = "Beautiful girl"
+image_texture = ExtResource("6_yl61k")
+
+[node name="Picture_Frame22" parent="PictureFramesGroup" instance=ExtResource("3_q2tkb")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, -8.901755, 4, -40)
+image_texture = ExtResource("4_vufhw")
+
+[node name="Picture_Frame23" parent="PictureFramesGroup" instance=ExtResource("3_q2tkb")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, -8.901755, 4, -34)
+description_text = "Beautiful girl"
+image_texture = ExtResource("6_yl61k")
+
+[node name="Picture_Frame24" parent="PictureFramesGroup" instance=ExtResource("3_q2tkb")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, -8.901755, 4, -56)
+image_texture = ExtResource("4_vufhw")
+
+[node name="Picture_Frame28" parent="PictureFramesGroup" instance=ExtResource("3_q2tkb")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -3.9017553, 4, -58.9523)
+image_texture = ExtResource("4_vufhw")
+
+[node name="Picture_Frame29" parent="PictureFramesGroup" instance=ExtResource("3_q2tkb")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 6.0982447, 4, -58.9523)
+image_texture = ExtResource("4_vufhw")
+
+[node name="Picture_Frame30" parent="PictureFramesGroup" instance=ExtResource("3_q2tkb")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 17.098244, 4, -58.9523)
+image_texture = ExtResource("4_vufhw")
+
+[node name="Picture_Frame31" parent="PictureFramesGroup" instance=ExtResource("3_q2tkb")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 26.098244, 4, -58.9523)
+image_texture = ExtResource("4_vufhw")
+
+[node name="Picture_Frame32" parent="PictureFramesGroup" instance=ExtResource("3_q2tkb")]
+transform = Transform3D(-2.1855693e-07, 0, 1, 0, 1, 0, -1, 0, -2.1855693e-07, 23.098244, 4, -46.03629)
+image_texture = ExtResource("4_vufhw")
+
+[node name="Picture_Frame33" parent="PictureFramesGroup" instance=ExtResource("3_q2tkb")]
+transform = Transform3D(-2.1855693e-07, 0, 1, 0, 1, 0, -1, 0, -2.1855693e-07, 14.098244, 4, -46.03629)
+image_texture = ExtResource("4_vufhw")
+
+[node name="Picture_Frame25" parent="PictureFramesGroup" instance=ExtResource("3_q2tkb")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, -8.901755, 4, -48)
+description_text = "Beautiful girl"
+image_texture = ExtResource("6_yl61k")
+
+[node name="Picture_Frame26" parent="PictureFramesGroup" instance=ExtResource("3_q2tkb")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 28.935963, 4, -48)
+image_texture = ExtResource("4_vufhw")
+
+[node name="Picture_Frame27" parent="PictureFramesGroup" instance=ExtResource("3_q2tkb")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 28.935963, 4, -56)
+description_text = "Beautiful girl"
+image_texture = ExtResource("6_yl61k")
+
+[node name="Picture_Frame3" parent="PictureFramesGroup" instance=ExtResource("3_q2tkb")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 10.923044, 4, -21.07574)
+description_text = "Beautiful girl"
+image_texture = ExtResource("5_nwqag")
+
+[node name="Picture_Frame4" parent="PictureFramesGroup" instance=ExtResource("3_q2tkb")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 15.923044, 4, -21.07574)
+description_text = "Beautiful girl"
+image_texture = ExtResource("5_nwqag")
+
+[node name="Picture_Frame5" parent="PictureFramesGroup" instance=ExtResource("3_q2tkb")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 20.923044, 4, -21.07574)
+description_text = "Beautiful girl"
+image_texture = ExtResource("5_nwqag")
+
+[node name="Picture_Frame6" parent="PictureFramesGroup" instance=ExtResource("3_q2tkb")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 20.923044, 4, -29.928974)
+description_text = "Beautiful girl"
+image_texture = ExtResource("5_nwqag")
+
+[node name="Picture_Frame9" parent="PictureFramesGroup" instance=ExtResource("3_q2tkb")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 22.923044, 4, -25.446253)
+description_text = "Beautiful girl"
+image_texture = ExtResource("5_nwqag")
+
+[node name="Picture_Frame7" parent="PictureFramesGroup" instance=ExtResource("3_q2tkb")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 15.923044, 4, -29.928974)
+description_text = "Beautiful girl"
+image_texture = ExtResource("5_nwqag")
+
+[node name="Picture_Frame8" parent="PictureFramesGroup" instance=ExtResource("3_q2tkb")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 10.923044, 4, -29.928974)
+description_text = "Beautiful girl"
+image_texture = ExtResource("5_nwqag")
+
+[node name="Picture_Frame12" parent="PictureFramesGroup" instance=ExtResource("3_q2tkb")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -21.076956, 4, -21.07574)
+description_text = "Beautiful girl"
+image_texture = ExtResource("5_nwqag")
+
+[node name="Picture_Frame18" parent="PictureFramesGroup" instance=ExtResource("3_q2tkb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.926662, 4, -23.49249)
+description_text = "Beautiful girl"
+image_texture = ExtResource("5_nwqag")
+
+[node name="Picture_Frame19" parent="PictureFramesGroup" instance=ExtResource("3_q2tkb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.926662, 4, -27.492493)
+description_text = "Beautiful girl"
+image_texture = ExtResource("5_nwqag")
+
+[node name="Picture_Frame13" parent="PictureFramesGroup" instance=ExtResource("3_q2tkb")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -16.076956, 4, -21.07574)
+description_text = "Beautiful girl"
+image_texture = ExtResource("5_nwqag")
+
+[node name="Picture_Frame14" parent="PictureFramesGroup" instance=ExtResource("3_q2tkb")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -11.076956, 4, -21.07574)
+description_text = "Beautiful girl"
+image_texture = ExtResource("5_nwqag")
+
+[node name="Picture_Frame15" parent="PictureFramesGroup" instance=ExtResource("3_q2tkb")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -11.076956, 4, -29.928974)
+description_text = "Beautiful girl"
+image_texture = ExtResource("5_nwqag")
+
+[node name="Picture_Frame16" parent="PictureFramesGroup" instance=ExtResource("3_q2tkb")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -16.076956, 4, -29.928974)
+description_text = "Beautiful girl"
+image_texture = ExtResource("5_nwqag")
+
+[node name="Picture_Frame17" parent="PictureFramesGroup" instance=ExtResource("3_q2tkb")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -21.076956, 4, -29.928974)
+description_text = "Beautiful girl"
+image_texture = ExtResource("5_nwqag")

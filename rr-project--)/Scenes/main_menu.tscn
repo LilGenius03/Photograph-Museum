@@ -51,7 +51,7 @@ text = "Quit"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="PostProcess"]
 
-[node name="ColorRect" type="ColorRect" parent="PostProcess/CanvasLayer"]
+[node name="ScreenFilter" type="ColorRect" parent="PostProcess/CanvasLayer"]
 material = SubResource("ShaderMaterial_pba03")
 anchors_preset = 15
 anchor_right = 1.0

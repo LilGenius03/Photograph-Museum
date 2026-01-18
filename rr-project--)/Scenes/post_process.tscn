@@ -12,7 +12,7 @@ shader_parameter/style = 0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+[node name="ScreenFilter" type="ColorRect" parent="CanvasLayer"]
 material = SubResource("ShaderMaterial_pba03")
 anchors_preset = 15
 anchor_right = 1.0
