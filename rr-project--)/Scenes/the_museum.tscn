@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bjtin1vqe3th7"]
+[gd_scene load_steps=14 format=3 uid="uid://bjtin1vqe3th7"]
 
 [ext_resource type="Script" uid="uid://cfmet218xxrv2" path="res://Scenes/PictureFormat.gd" id="1_nwqag"]
 [ext_resource type="PackedScene" uid="uid://csh3ima41r61x" path="res://Scenes/Player.tscn" id="2_y36bi"]
@@ -21,6 +21,11 @@ background_mode = 2
 sky = SubResource("Sky_q2tkb")
 tonemap_mode = 2
 glow_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0xmwb"]
+albedo_color = Color(0.3791798, 0.3791798, 0.37917978, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_0xmwb"]
 
 [node name="The Museum" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 3, -6)
@@ -269,3 +274,8 @@ image_texture = ExtResource("5_nwqag")
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -21.076956, 4, -29.928974)
 description_text = "Beautiful girl"
 image_texture = ExtResource("5_nwqag")
+
+[node name="Plane" type="MeshInstance3D" parent="."]
+transform = Transform3D(53.745, 0, 0, 0, 53.745, 0, 0, 0, 53.745, 0, 0, -25)
+material_override = SubResource("StandardMaterial3D_0xmwb")
+mesh = SubResource("PlaneMesh_0xmwb")
