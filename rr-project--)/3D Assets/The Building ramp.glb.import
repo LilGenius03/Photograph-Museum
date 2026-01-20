@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://tj0t5rlfalum"
-path="res://.godot/imported/Camera Signs.glb-c8406dad7fedebe2e0f49cb2c5d36e9d.scn"
+uid="uid://e1klugkjsb7n"
+path="res://.godot/imported/The Building ramp.glb-85d6fd69f49cef6bd8f25061f53ed6ba.scn"
 
 [deps]
 
-source_file="res://3D Assets/Camera Signs.glb"
-dest_files=["res://.godot/imported/Camera Signs.glb-c8406dad7fedebe2e0f49cb2c5d36e9d.scn"]
+source_file="res://3D Assets/The Building ramp.glb"
+dest_files=["res://.godot/imported/The Building ramp.glb-85d6fd69f49cef6bd8f25061f53ed6ba.scn"]
 
 [params]
 
@@ -37,12 +37,6 @@ import_script/path=""
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
-_subresources={
-"nodes": {
-"PATH:Sign": {
-"generate/physics": true
-}
-}
-}
+_subresources={}
 gltf/naming_version=2
 gltf/embedded_image_handling=1
