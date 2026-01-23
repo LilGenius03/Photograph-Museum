@@ -14,24 +14,16 @@
 [ext_resource type="PackedScene" uid="uid://e1klugkjsb7n" path="res://3D Assets/The Building ramp.glb" id="11_42ixf"]
 [ext_resource type="PackedScene" uid="uid://dlnw7jlb8pdhx" path="res://Scenes/muesum_signs.tscn" id="12_wfmop"]
 [ext_resource type="Shader" uid="uid://cqa73blb0wgdd" path="res://Scenes/Painted_Material.gdshader" id="14_wrrm3"]
-[ext_resource type="Texture2D" uid="uid://mlubtr1vdqnp" path="res://Textures/Perlin Noise.png" id="15_opqo5"]
-[ext_resource type="Texture2D" uid="uid://c1amygnqgtjvc" path="res://Textures/abstract-grayscale-textured-wall-background-brush-strokes-moody-art-design-dark-texture-suitable-as-modern-406643594.webp" id="16_edy5y"]
-[ext_resource type="Texture2D" uid="uid://c8v8fe62hkp4u" path="res://Textures/Texturelabs_Paper_304L.jpg" id="16_opqo5"]
 
-[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_hvgs0"]
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_mss8p"]
 panorama = ExtResource("2_iwebx")
 
-[sub_resource type="Sky" id="Sky_q2tkb"]
-sky_material = SubResource("PanoramaSkyMaterial_hvgs0")
-process_mode = 1
+[sub_resource type="Sky" id="Sky_mss8p"]
+sky_material = SubResource("PanoramaSkyMaterial_mss8p")
 
-[sub_resource type="Environment" id="Environment_ogldg"]
+[sub_resource type="Environment" id="Environment_wrrm3"]
 background_mode = 2
-sky = SubResource("Sky_q2tkb")
-sky_rotation = Vector3(0, -6.2831855, 0)
-ambient_light_color = Color(0.22664168, 0.2463066, 0.24303225, 1)
-ambient_light_sky_contribution = 0.6
-ambient_light_energy = 3.84
+sky = SubResource("Sky_mss8p")
 tonemap_mode = 2
 glow_enabled = true
 
@@ -43,11 +35,20 @@ shader_parameter/shade_low = 0.05
 shader_parameter/shade_high = 0.1050000049875
 shader_parameter/brightness = 1.6670000791825
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_mss8p"]
+load_path = "res://.godot/imported/Perlin Noise.png-ab1a8824001a6b583a9e1f27cdfc7b8e.s3tc.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_wrrm3"]
+load_path = "res://.godot/imported/abstract-grayscale-textured-wall-background-brush-strokes-moody-art-design-dark-texture-suitable-as-modern-406643594.webp-7aea5810559dc554ba61792657b2fbe0.s3tc.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_opqo5"]
+load_path = "res://.godot/imported/Texturelabs_Paper_304L.jpg-6e4b7712a9a4cefa72823c5d8c8f7784.s3tc.ctex"
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_icobv"]
 render_priority = 1
 shader = ExtResource("14_wrrm3")
-shader_parameter/brush_noise = ExtResource("16_edy5y")
-shader_parameter/paper_texture = ExtResource("16_opqo5")
+shader_parameter/brush_noise = SubResource("CompressedTexture2D_wrrm3")
+shader_parameter/paper_texture = SubResource("CompressedTexture2D_opqo5")
 shader_parameter/brush_scale = 2.2
 shader_parameter/motion_strength = 0.02
 shader_parameter/pigment_strength = 0.245
@@ -63,7 +64,7 @@ resource_name = "Sign"
 next_pass = SubResource("ShaderMaterial_icobv")
 cull_mode = 2
 albedo_color = Color(0.47472072, 0.4873556, 0.52231014, 1)
-albedo_texture = ExtResource("15_opqo5")
+albedo_texture = SubResource("CompressedTexture2D_mss8p")
 roughness = 0.255287
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_t3n45"]
@@ -219,6 +220,15 @@ text = "Nature"
 [node name="The Museum" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 3, -6)
 
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_wrrm3")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+light_color = Color(0.8203659, 0.82036585, 0.8203658, 1)
+light_energy = 0.407
+shadow_enabled = true
+
 [node name="PictureFormat" type="Node3D" parent="."]
 
 [node name="PictureCanvas" type="CanvasLayer" parent="PictureFormat"]
@@ -290,16 +300,6 @@ text = "Hello World"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_ogldg")
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
-light_color = Color(0.86924267, 0.7437752, 0.5960199, 1)
-light_energy = 0.342
-shadow_enabled = true
-shadow_opacity = 0.8
 
 [node name="Player" parent="." node_paths=PackedStringArray("inspect_ui", "inspect_label", "PressF_label", "inspect_image") instance=ExtResource("2_y36bi")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0.56630516, 0.945699, -1.2901411)

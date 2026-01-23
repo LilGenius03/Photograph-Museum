@@ -68,3 +68,26 @@ StyleSwitch={
 
 textures/canvas_textures/default_texture_filter=2
 textures/canvas_textures/default_texture_repeat=1
+
+[shader_globals]
+
+specular_smoothness={
+"type": "float",
+"value": 0.03
+}
+fresnel_smoothness={
+"type": "float",
+"value": 0.05
+}
+outline_width={
+"type": "float",
+"value": 5.0
+}
+outline_color={
+"type": "color",
+"value": Color(0, 0, 0, 1)
+}
+diffuse_curve={
+"type": "sampler2D",
+"value": "::ixj0m"
+}

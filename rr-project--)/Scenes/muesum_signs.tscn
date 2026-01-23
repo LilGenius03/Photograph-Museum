@@ -1,10 +1,6 @@
-[gd_scene load_steps=18 format=4 uid="uid://dlnw7jlb8pdhx"]
+[gd_scene load_steps=12 format=4 uid="uid://dlnw7jlb8pdhx"]
 
 [ext_resource type="Shader" uid="uid://c5ahvkyqdw88h" path="res://Materials/toon_shader.gdshader" id="1_icobv"]
-[ext_resource type="Shader" uid="uid://cqa73blb0wgdd" path="res://Scenes/Painted_Material.gdshader" id="2_u4rtm"]
-[ext_resource type="Texture2D" uid="uid://mlubtr1vdqnp" path="res://Textures/Perlin Noise.png" id="3_t3n45"]
-[ext_resource type="Texture2D" uid="uid://c8v8fe62hkp4u" path="res://Textures/Texturelabs_Paper_304L.jpg" id="4_a88dw"]
-[ext_resource type="Texture2D" uid="uid://c1amygnqgtjvc" path="res://Textures/abstract-grayscale-textured-wall-background-brush-strokes-moody-art-design-dark-texture-suitable-as-modern-406643594.webp" id="4_j5acr"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_u4rtm"]
 render_priority = 0
@@ -13,29 +9,6 @@ shader_parameter/main_color = Color(0.3739573, 0.3799164, 0.388018, 1)
 shader_parameter/shade_low = 0.05
 shader_parameter/shade_high = 0.1050000049875
 shader_parameter/brightness = 1.6670000791825
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_icobv"]
-render_priority = 1
-shader = ExtResource("2_u4rtm")
-shader_parameter/brush_noise = ExtResource("4_j5acr")
-shader_parameter/paper_texture = ExtResource("4_a88dw")
-shader_parameter/brush_scale = 2.2
-shader_parameter/motion_strength = 0.02
-shader_parameter/pigment_strength = 0.245
-shader_parameter/paper_strength = 0.27
-shader_parameter/outline_strength = 0.27
-shader_parameter/shading_strength = 0.4
-shader_parameter/palette_a = Color(0, 0.9895336, 0.86181384, 1)
-shader_parameter/palette_b = Color(0.45, 0.6, 0.7, 1)
-shader_parameter/palette_c = Color(0.85, 0.45, 0.35, 1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fo3ki"]
-resource_name = "Sign"
-next_pass = SubResource("ShaderMaterial_icobv")
-cull_mode = 2
-albedo_color = Color(0.47472072, 0.4873556, 0.52231014, 1)
-albedo_texture = ExtResource("3_t3n45")
-roughness = 0.255287
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_t3n45"]
 render_priority = 0
@@ -128,7 +101,6 @@ _surfaces = [{
 "format": 34896613399,
 "index_count": 75,
 "index_data": PackedByteArray("AAABAAIAAAADAAEABAAAAAIABQADAAAABQAGAAMABQAHAAYABQAIAAcABQAJAAgABQAKAAkACgAFAAsACwAFAAwADAAFAA0ADQAFAA4ADgAFAA8ADwAFABAAEAAFABEAEQAFABIABQAAABMABQATABQABQAUABUAFgATAAAAFgAUABMAFQAUABYABAAWAAAAFQAWAAQA"),
-"material": SubResource("StandardMaterial3D_fo3ki"),
 "name": "Sign",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
