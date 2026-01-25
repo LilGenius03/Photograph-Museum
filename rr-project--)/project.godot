@@ -73,11 +73,11 @@ textures/canvas_textures/default_texture_repeat=1
 
 specular_smoothness={
 "type": "float",
-"value": 0.03
+"value": 0.1
 }
 fresnel_smoothness={
 "type": "float",
-"value": 0.05
+"value": 0.1
 }
 outline_width={
 "type": "float",

@@ -1,4 +1,4 @@
-[gd_scene load_steps=138 format=4 uid="uid://br3chl1eajpp3"]
+[gd_scene load_steps=174 format=4 uid="uid://br3chl1eajpp3"]
 
 [ext_resource type="PackedScene" uid="uid://cieps3eksxxkm" path="res://3D Assets/The Building.glb" id="1_abo5s"]
 [ext_resource type="Shader" uid="uid://c5ahvkyqdw88h" path="res://Materials/toon_shader.gdshader" id="2_ixj0m"]
@@ -221,6 +221,70 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_3ldbf")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_54f2b"]
+render_priority = 0
+shader = ExtResource("3_vghge")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rpt5s"]
+render_priority = 0
+next_pass = SubResource("ShaderMaterial_54f2b")
+shader = ExtResource("3_ixj0m")
+shader_parameter/emission = Color(0, 0, 0, 1)
+shader_parameter/emission_energy = 1.0
+shader_parameter/color = Color(0.059, 0, 0.373, 1)
+shader_parameter/specular = Color(0.3, 0.3, 0.3, 0.5)
+shader_parameter/fresnel = Color(0.2, 0.2, 0.2, 0.3)
+shader_parameter/uv_scale = Vector2(1, 1)
+shader_parameter/uv_offset = Vector2(0, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_b500a"]
+render_priority = 0
+shader = ExtResource("3_vghge")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4jh2b"]
+render_priority = 0
+next_pass = SubResource("ShaderMaterial_b500a")
+shader = ExtResource("3_ixj0m")
+shader_parameter/emission = Color(0.92101353, 0, 0.2815669, 1)
+shader_parameter/emission_energy = 1.0
+shader_parameter/color = Color(0.8799137, 0, 0.23452732, 1)
+shader_parameter/specular = Color(0.3, 0.3, 0.3, 0.5)
+shader_parameter/fresnel = Color(0.2, 0.2, 0.2, 0.3)
+shader_parameter/uv_scale = Vector2(1, 1)
+shader_parameter/uv_offset = Vector2(0, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_w5r4r"]
+render_priority = 0
+shader = ExtResource("3_vghge")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kxusd"]
+render_priority = 0
+next_pass = SubResource("ShaderMaterial_w5r4r")
+shader = ExtResource("3_ixj0m")
+shader_parameter/emission = Color(0.11119685, 0.11119684, 0.11119684, 1)
+shader_parameter/emission_energy = 1.0
+shader_parameter/color = Color(0.88399595, 0, 0.17267811, 1)
+shader_parameter/specular = Color(0.3, 0.3, 0.3, 0.5)
+shader_parameter/fresnel = Color(0.2, 0.2, 0.2, 0.3)
+shader_parameter/uv_scale = Vector2(1, 1)
+shader_parameter/uv_offset = Vector2(0, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mcn2t"]
+render_priority = 0
+shader = ExtResource("3_vghge")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1tpiw"]
+render_priority = 0
+next_pass = SubResource("ShaderMaterial_mcn2t")
+shader = ExtResource("3_ixj0m")
+shader_parameter/emission = Color(0, 0, 0, 1)
+shader_parameter/emission_energy = 1.0
+shader_parameter/color = Color(0.745286, 0.72724956, 0.7088888, 1)
+shader_parameter/specular = Color(0.3, 0.3, 0.3, 0.5)
+shader_parameter/fresnel = Color(0.2, 0.2, 0.2, 0.3)
+shader_parameter/uv_scale = Vector2(1, 1)
+shader_parameter/uv_offset = Vector2(0, 0)
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_ssvxh"]
 _surfaces = [{
@@ -927,21 +991,13 @@ next_pass = SubResource("ShaderMaterial_ftmsd")
 shader = ExtResource("3_ixj0m")
 shader_parameter/emission = Color(0, 0, 0, 1)
 shader_parameter/emission_energy = 1.0
-shader_parameter/color = Color(0.30440697, 0.39539734, 0.96508485, 1)
-shader_parameter/specular = Color(0.3, 0.3, 0.3, 0.5)
-shader_parameter/fresnel = Color(0.2, 0.2, 0.2, 0.3)
+shader_parameter/color = Color(0.19130826, 0.07808969, 0.98140067, 1)
+shader_parameter/specular = Color(0.3019608, 0.3019608, 0.3019608, 0.4509804)
+shader_parameter/fresnel = Color(0.2, 0.2, 0.2, 0.54509807)
 shader_parameter/uv_scale = Vector2(1, 1)
 shader_parameter/uv_offset = Vector2(0, 0)
 
-[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_vvkum"]
-next_pass = SubResource("ShaderMaterial_16htk")
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_7icd7"]
-render_priority = 0
-shader = ExtResource("3_vghge")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ixj0m"]
-next_pass = SubResource("ShaderMaterial_7icd7")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0dsmk"]
 transparency = 1
 blend_mode = 1
 
@@ -1050,6 +1106,70 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_wbcx6")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bh054"]
+render_priority = 0
+shader = ExtResource("3_vghge")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pvgl6"]
+render_priority = 0
+next_pass = SubResource("ShaderMaterial_bh054")
+shader = ExtResource("3_ixj0m")
+shader_parameter/emission = Color(0, 0, 0, 1)
+shader_parameter/emission_energy = 1.0
+shader_parameter/color = Color(0.06312003, 0.015560287, 0.3933173, 1)
+shader_parameter/specular = Color(0.3, 0.3, 0.3, 0.5)
+shader_parameter/fresnel = Color(0.2, 0.2, 0.2, 0.3)
+shader_parameter/uv_scale = Vector2(1, 1)
+shader_parameter/uv_offset = Vector2(0, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_e6tca"]
+render_priority = 0
+shader = ExtResource("3_vghge")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_eg3jy"]
+render_priority = 0
+next_pass = SubResource("ShaderMaterial_e6tca")
+shader = ExtResource("3_ixj0m")
+shader_parameter/emission = Color(0.7824048, 1.025185e-05, 0.24919972, 1)
+shader_parameter/emission_energy = 1.0
+shader_parameter/color = Color(0.8857642, 0, 0.1367082, 1)
+shader_parameter/specular = Color(0.3, 0.3, 0.3, 0.5)
+shader_parameter/fresnel = Color(0.2, 0.2, 0.2, 0.3)
+shader_parameter/uv_scale = Vector2(1, 1)
+shader_parameter/uv_offset = Vector2(0, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qtvq0"]
+render_priority = 0
+shader = ExtResource("3_vghge")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_n58ej"]
+render_priority = 0
+next_pass = SubResource("ShaderMaterial_qtvq0")
+shader = ExtResource("3_ixj0m")
+shader_parameter/emission = Color(0.2677903, 0.2677903, 0.2677903, 1)
+shader_parameter/emission_energy = 1.0
+shader_parameter/color = Color(0.8838533, 0, 0.17525002, 1)
+shader_parameter/specular = Color(0.3, 0.3, 0.3, 0.5)
+shader_parameter/fresnel = Color(0.2, 0.2, 0.2, 0.3)
+shader_parameter/uv_scale = Vector2(1, 1)
+shader_parameter/uv_offset = Vector2(0, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_avewm"]
+render_priority = 0
+shader = ExtResource("3_vghge")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_h87iw"]
+render_priority = 0
+next_pass = SubResource("ShaderMaterial_avewm")
+shader = ExtResource("3_ixj0m")
+shader_parameter/emission = Color(0, 0, 0, 1)
+shader_parameter/emission_energy = 1.0
+shader_parameter/color = Color(0.5936409, 0.5975444, 0.5897401, 1)
+shader_parameter/specular = Color(0.3, 0.3, 0.3, 0.5)
+shader_parameter/fresnel = Color(0.2, 0.2, 0.2, 0.3)
+shader_parameter/uv_scale = Vector2(1, 1)
+shader_parameter/uv_offset = Vector2(0, 0)
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_70dul"]
 _surfaces = [{
@@ -1746,15 +1866,26 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_irupo")
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_p6jaa"]
+render_priority = 0
+shader = ExtResource("3_vghge")
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_vvkum"]
 render_priority = 0
-shader = ExtResource("2_ixj0m")
-shader_parameter/main_color = Color(0.015686275, 0.019607844, 0.015686275, 1)
-shader_parameter/shade_low = 0.05
-shader_parameter/shade_high = 0.15
-shader_parameter/brightness = 1.0
+next_pass = SubResource("ShaderMaterial_p6jaa")
+shader = ExtResource("3_ixj0m")
+shader_parameter/emission = Color(0, 0, 0, 1)
+shader_parameter/emission_energy = 1.0
+shader_parameter/color = Color(0.20566368, 0.25399476, 1, 1)
+shader_parameter/specular = Color(0.3, 0.3, 0.3, 0.5)
+shader_parameter/fresnel = Color(0.2, 0.2, 0.2, 0.3)
+shader_parameter/uv_scale = Vector2(1, 1)
+shader_parameter/uv_offset = Vector2(0, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_x4yh4"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_171vo"]
+next_pass = SubResource("ShaderMaterial_x4yh4")
 transparency = 1
 blend_mode = 1
 
@@ -1863,6 +1994,70 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_n5hrf")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jhr5l"]
+render_priority = 0
+shader = ExtResource("3_vghge")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_m44nw"]
+render_priority = 0
+next_pass = SubResource("ShaderMaterial_jhr5l")
+shader = ExtResource("3_ixj0m")
+shader_parameter/emission = Color(0, 0, 0, 1)
+shader_parameter/emission_energy = 1.0
+shader_parameter/color = Color(0.0594503, 3.6098064e-07, 0.37234476, 1)
+shader_parameter/specular = Color(0.3, 0.3, 0.3, 0.5)
+shader_parameter/fresnel = Color(0.2, 0.2, 0.2, 0.3)
+shader_parameter/uv_scale = Vector2(1, 1)
+shader_parameter/uv_offset = Vector2(0, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1y5kt"]
+render_priority = 0
+shader = ExtResource("3_vghge")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8y4u7"]
+render_priority = 0
+next_pass = SubResource("ShaderMaterial_1y5kt")
+shader = ExtResource("3_ixj0m")
+shader_parameter/emission = Color(0.8444098, 0, 0.16932681, 1)
+shader_parameter/emission_energy = 1.0
+shader_parameter/color = Color(0.886207, 0, 0.12607673, 1)
+shader_parameter/specular = Color(0.3, 0.3, 0.3, 0.5)
+shader_parameter/fresnel = Color(0.2, 0.2, 0.2, 0.3)
+shader_parameter/uv_scale = Vector2(1, 1)
+shader_parameter/uv_offset = Vector2(0, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_k8soy"]
+render_priority = 0
+shader = ExtResource("3_vghge")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_t5dya"]
+render_priority = 0
+next_pass = SubResource("ShaderMaterial_k8soy")
+shader = ExtResource("3_ixj0m")
+shader_parameter/emission = Color(0.25565878, 0.25565878, 0.25565878, 1)
+shader_parameter/emission_energy = 1.0
+shader_parameter/color = Color(0.884544, 0, 0.16241983, 1)
+shader_parameter/specular = Color(0.3, 0.3, 0.3, 0.5)
+shader_parameter/fresnel = Color(0.2, 0.2, 0.2, 0.3)
+shader_parameter/uv_scale = Vector2(1, 1)
+shader_parameter/uv_offset = Vector2(0, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5hn23"]
+render_priority = 0
+shader = ExtResource("3_vghge")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1luh6"]
+render_priority = 0
+next_pass = SubResource("ShaderMaterial_5hn23")
+shader = ExtResource("3_ixj0m")
+shader_parameter/emission = Color(0, 0, 0, 1)
+shader_parameter/emission_energy = 1.0
+shader_parameter/color = Color(0.61381024, 0.6075963, 0.60914457, 1)
+shader_parameter/specular = Color(0.3, 0.3, 0.3, 0.5)
+shader_parameter/fresnel = Color(0.2, 0.2, 0.2, 0.3)
+shader_parameter/uv_scale = Vector2(1, 1)
+shader_parameter/uv_offset = Vector2(0, 0)
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_t0ftd"]
 _surfaces = [{
@@ -2559,15 +2754,26 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_t7647")
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_q3q3m"]
+render_priority = 0
+shader = ExtResource("3_vghge")
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_6j7q2"]
 render_priority = 0
-shader = ExtResource("2_ixj0m")
-shader_parameter/main_color = Color(0.015686275, 0.019607844, 0.015686275, 1)
-shader_parameter/shade_low = 0.05
-shader_parameter/shade_high = 0.15
-shader_parameter/brightness = 1.0
+next_pass = SubResource("ShaderMaterial_q3q3m")
+shader = ExtResource("3_ixj0m")
+shader_parameter/emission = Color(0, 0, 0, 1)
+shader_parameter/emission_energy = 1.0
+shader_parameter/color = Color(0.1599842, 0.13499397, 0.9999884, 1)
+shader_parameter/specular = Color(0.3, 0.3, 0.3, 0.5)
+shader_parameter/fresnel = Color(0.2, 0.2, 0.2, 0.3)
+shader_parameter/uv_scale = Vector2(1, 1)
+shader_parameter/uv_offset = Vector2(0, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ol6lo"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vghge"]
+next_pass = SubResource("ShaderMaterial_ol6lo")
 transparency = 1
 blend_mode = 1
 
@@ -2676,6 +2882,70 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_0o0fv")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gvng2"]
+render_priority = 0
+shader = ExtResource("3_vghge")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4oy28"]
+render_priority = 0
+next_pass = SubResource("ShaderMaterial_gvng2")
+shader = ExtResource("3_ixj0m")
+shader_parameter/emission = Color(0, 0, 0, 1)
+shader_parameter/emission_energy = 1.0
+shader_parameter/color = Color(0.059, 0, 0.373, 1)
+shader_parameter/specular = Color(0.3, 0.3, 0.3, 0.5)
+shader_parameter/fresnel = Color(0.2, 0.2, 0.2, 0.3)
+shader_parameter/uv_scale = Vector2(1, 1)
+shader_parameter/uv_offset = Vector2(0, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_px0qe"]
+render_priority = 0
+shader = ExtResource("3_vghge")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_do4u7"]
+render_priority = 0
+next_pass = SubResource("ShaderMaterial_px0qe")
+shader = ExtResource("3_ixj0m")
+shader_parameter/emission = Color(0.7106731, 0, 0.22408473, 1)
+shader_parameter/emission_energy = 1.0
+shader_parameter/color = Color(0.88223106, 0, 0.20200884, 1)
+shader_parameter/specular = Color(0.3, 0.3, 0.3, 0.5)
+shader_parameter/fresnel = Color(0.2, 0.2, 0.2, 0.3)
+shader_parameter/uv_scale = Vector2(1, 1)
+shader_parameter/uv_offset = Vector2(0, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_d1gre"]
+render_priority = 0
+shader = ExtResource("3_vghge")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xbey2"]
+render_priority = 0
+next_pass = SubResource("ShaderMaterial_d1gre")
+shader = ExtResource("3_ixj0m")
+shader_parameter/emission = Color(0.26293245, 0.26293245, 0.26293245, 1)
+shader_parameter/emission_energy = 1.0
+shader_parameter/color = Color(0.881767, 0, 0.20897716, 1)
+shader_parameter/specular = Color(0.3, 0.3, 0.3, 0.5)
+shader_parameter/fresnel = Color(0.2, 0.2, 0.2, 0.3)
+shader_parameter/uv_scale = Vector2(1, 1)
+shader_parameter/uv_offset = Vector2(0, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_li2s2"]
+render_priority = 0
+shader = ExtResource("3_vghge")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qhlnq"]
+render_priority = 0
+next_pass = SubResource("ShaderMaterial_li2s2")
+shader = ExtResource("3_ixj0m")
+shader_parameter/emission = Color(0, 0, 0, 1)
+shader_parameter/emission_energy = 1.0
+shader_parameter/color = Color(0.5823756, 0.58237565, 0.58237547, 1)
+shader_parameter/specular = Color(0.3, 0.3, 0.3, 0.5)
+shader_parameter/fresnel = Color(0.2, 0.2, 0.2, 0.3)
+shader_parameter/uv_scale = Vector2(1, 1)
+shader_parameter/uv_offset = Vector2(0, 0)
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_ugbtl"]
 _surfaces = [{
@@ -3398,13 +3668,21 @@ shader_parameter/fresnel = Color(0.2, 0.2, 0.2, 0.3)
 shader_parameter/uv_scale = Vector2(1, 1)
 shader_parameter/uv_offset = Vector2(0, 0)
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7icd7"]
+render_priority = 0
+shader = ExtResource("3_vghge")
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_0dsmk"]
 render_priority = 0
-shader = ExtResource("2_ixj0m")
-shader_parameter/main_color = Color(0.6901961, 0.70980394, 0.73333335, 1)
-shader_parameter/shade_low = 0.05
-shader_parameter/shade_high = 0.15
-shader_parameter/brightness = 1.0
+next_pass = SubResource("ShaderMaterial_7icd7")
+shader = ExtResource("3_ixj0m")
+shader_parameter/emission = Color(0, 0, 0, 1)
+shader_parameter/emission_energy = 1.0
+shader_parameter/color = Color(0.4480375, 0.4369872, 0.44238028, 1)
+shader_parameter/specular = Color(0.3, 0.3, 0.3, 0.5)
+shader_parameter/fresnel = Color(0.2, 0.2, 0.2, 0.3)
+shader_parameter/uv_scale = Vector2(1, 1)
+shader_parameter/uv_offset = Vector2(0, 0)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_pewg7"]
 data = PackedVector3Array(-9.500001, 0, -19.5, 10.5, 0, -30.5, -9.500001, 0, -30.5, -9.500001, 0, -19.5, 10.5, 0, -19.5, 10.5, 0, -30.5, -9.500001, 0, -10.5, 10.5, 0, -19.5, -9.500001, 0, -19.5, -9.500001, 0, -10.5, 10.5, 0, -10.5, 10.5, 0, -19.5, -9.500001, 0, -19.5, -23.5, 0, -30.5, -23.5, 0, -19.5, -9.500001, 0, -19.5, -9.500001, 0, -30.5, -23.5, 0, -30.5, 10.5, 0, -30.5, 24.5, 0, -19.5, 24.5, 0, -30.5, 10.5, 0, -30.5, 10.5, 0, -19.5, 24.5, 0, -19.5, -9.500001, 1, -19.5, 10.5, 1, -30.5, 10.5, 1, -19.5, -9.500001, 1, -19.5, -9.500001, 1, -30.5, 10.5, 1, -30.5, -9.500001, 1, -10.5, 10.5, 1, -19.5, 10.5, 1, -10.5, -9.500001, 1, -10.5, -9.500001, 1, -19.5, 10.5, 1, -19.5, -9.500001, 1, -19.5, -23.5, 1, -30.5, -9.500001, 1, -30.5, -9.500001, 1, -19.5, -23.5, 1, -19.5, -23.5, 1, -30.5, 10.5, 1, -30.5, 24.5, 1, -19.5, 10.5, 1, -19.5, 10.5, 1, -30.5, 24.5, 1, -30.5, 24.5, 1, -19.5, -9.500001, 0, -30.5, -23.5, 1, -30.5, -23.5, 0, -30.5, -9.500001, 0, -30.5, -9.500001, 1, -30.5, -23.5, 1, -30.5, 10.5, 0, -10.5, 10.5, 1, -19.5, 10.5, 0, -19.5, 10.5, 0, -10.5, 10.5, 1, -10.5, 10.5, 1, -19.5, 24.5, 0, -30.5, 10.5, 1, -30.5, 10.5, 0, -30.5, 24.5, 0, -30.5, 24.5, 1, -30.5, 10.5, 1, -30.5, -23.5, 0, -19.5, -9.500001, 1, -19.5, -9.500001, 0, -19.5, -23.5, 0, -19.5, -23.5, 1, -19.5, -9.500001, 1, -19.5, 10.5, 0, -59.5, 30.5, 1, -59.5, 10.5, 1, -59.5, 10.5, 0, -59.5, 30.5, 0, -59.5, 30.5, 1, -59.5, 24.5, 0, -19.5, 24.5, 1, -30.5, 24.5, 0, -30.5, 24.5, 0, -19.5, 24.5, 1, -19.5, 24.5, 1, -30.5, -23.5, 0, -30.5, -23.5, 1, -19.5, -23.5, 0, -19.5, -23.5, 0, -30.5, -23.5, 1, -30.5, -23.5, 1, -19.5, 10.5, 0, -19.5, 24.5, 1, -19.5, 24.5, 0, -19.5, 10.5, 0, -19.5, 10.5, 1, -19.5, 24.5, 1, -19.5, 10.5, 0, -59.5, -9.500001, 1, -59.5, -9.500001, 0, -59.5, 10.5, 0, -59.5, 10.5, 1, -59.5, -9.500001, 1, -59.5, -9.500001, 0, -44.5, -9.500001, 1, -59.5, -9.500001, 1, -44.5, -9.500001, 0, -44.5, -9.500001, 0, -59.5, -9.500001, 1, -59.5, -9.500001, 1, -44.5, 10.5, 1, -59.5, 10.5, 1, -44.5, -9.500001, 1, -44.5, -9.500001, 1, -59.5, 10.5, 1, -59.5, 10.5, 0, -44.5, -9.500001, 0, -59.5, -9.500001, 0, -44.5, 10.5, 0, -44.5, 10.5, 0, -59.5, -9.500001, 0, -59.5, 10.5, 0, -30.5, -9.500001, 0, -44.5, -9.500001, 0, -30.5, 10.5, 0, -30.5, 10.5, 0, -44.5, -9.500001, 0, -44.5, -9.500001, 1, -30.5, 10.5, 1, -44.5, 10.5, 1, -30.5, -9.500001, 1, -30.5, -9.500001, 1, -44.5, 10.5, 1, -44.5, -9.500001, 0, -30.5, -9.500001, 1, -44.5, -9.500001, 1, -30.5, -9.500001, 0, -30.5, -9.500001, 0, -44.5, -9.500001, 1, -44.5, 10.5, 1, -30.5, 10.5, 0, -44.5, 10.5, 0, -30.5, 10.5, 1, -30.5, 10.5, 1, -44.5, 10.5, 0, -44.5, 30.5, 1, -44.5, 30.5, 0, -59.5, 30.5, 0, -44.5, 30.5, 1, -44.5, 30.5, 1, -59.5, 30.5, 0, -59.5, 10.5, 0, -44.5, 30.5, 0, -59.5, 10.5, 0, -59.5, 10.5, 0, -44.5, 30.5, 0, -44.5, 30.5, 0, -59.5, 10.5, 1, -44.5, 30.5, 0, -44.5, 10.5, 0, -44.5, 10.5, 1, -44.5, 30.5, 1, -44.5, 30.5, 0, -44.5, 10.5, 1, -59.5, 30.5, 1, -44.5, 10.5, 1, -44.5, 10.5, 1, -59.5, 30.5, 1, -59.5, 30.5, 1, -44.5, -9.500001, 0, -19.5, -9.500001, 1, -10.5, -9.500001, 0, -10.5, -9.500001, 0, -19.5, -9.500001, 1, -19.5, -9.500001, 1, -10.5, -9.500001, 0, 0.5, 10.5, 1, 0.5, 10.5, 0, 0.5, -9.500001, 0, 0.5, -9.500001, 1, 0.5, 10.5, 1, 0.5, -9.500001, 0, -10.5, -9.500001, 1, 0.5, -9.500001, 0, 0.5, -9.500001, 0, -10.5, -9.500001, 1, -10.5, -9.500001, 1, 0.5, 10.5, 0, 0.5, 10.5, 1, -10.5, 10.5, 0, -10.5, 10.5, 0, 0.5, 10.5, 1, 0.5, 10.5, 1, -10.5, -9.500001, 1, 0.5, 10.5, 1, -10.5, 10.5, 1, 0.5, -9.500001, 1, 0.5, -9.500001, 1, -10.5, 10.5, 1, -10.5, -9.500001, 0, 0.5, 10.5, 0, -10.5, -9.500001, 0, -10.5, -9.500001, 0, 0.5, 10.5, 0, 0.5, 10.5, 0, -10.5)
@@ -3441,13 +3719,21 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_h8jl4")
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ts880"]
+render_priority = 0
+shader = ExtResource("3_vghge")
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_171vo"]
 render_priority = 0
-shader = ExtResource("2_ixj0m")
-shader_parameter/main_color = Color(0.6901961, 0.70980394, 0.73333335, 1)
-shader_parameter/shade_low = 0.05
-shader_parameter/shade_high = 0.15
-shader_parameter/brightness = 1.0
+next_pass = SubResource("ShaderMaterial_ts880")
+shader = ExtResource("3_ixj0m")
+shader_parameter/emission = Color(0, 0, 0, 1)
+shader_parameter/emission_energy = 1.0
+shader_parameter/color = Color(0.3943528, 0.39435276, 0.39435276, 1)
+shader_parameter/specular = Color(0.3, 0.3, 0.3, 0.5)
+shader_parameter/fresnel = Color(0.2, 0.2, 0.2, 0.3)
+shader_parameter/uv_scale = Vector2(1, 1)
+shader_parameter/uv_offset = Vector2(0, 0)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_tvwdk"]
 data = PackedVector3Array(3, -1, 2.5, 3, 0, 0, 3, 0, 2.5, 3, -1, 2.5, 3, -1, 0, 3, 0, 0, 3, -1, 0, 10, 0, 0, 3, 0, 0, 3, -1, 0, 10, -1, 0, 10, 0, 0, 10, -1, 0, 10, 0, 2.5, 10, 0, 0, 10, -1, 0, 10, -1, 2.5, 10, 0, 2.5, 10, -1, 2.5, 3, 0, 2.5, 10, 0, 2.5, 10, -1, 2.5, 3, -1, 2.5, 3, 0, 2.5, 3, -1, 0, 10, -1, 2.5, 10, -1, 0, 3, -1, 0, 3, -1, 2.5, 10, -1, 2.5, 10, 0, 0, 3, 0, 2.5, 3, 0, 0, 10, 0, 0, 10, 0, 2.5, 3, 0, 2.5, -10, -1, 2.5, -10, 0, 0, -10, 0, 2.5, -10, -1, 2.5, -10, -1, 0, -10, 0, 0, -10, -1, 0, -3, 0, 0, -10, 0, 0, -10, -1, 0, -3, -1, 0, -3, 0, 0, -3, -1, 0, -3, 0, 2.5, -3, 0, 0, -3, -1, 0, -3, -1, 2.5, -3, 0, 2.5, -3, -1, 2.5, -10, 0, 2.5, -3, 0, 2.5, -3, -1, 2.5, -10, -1, 2.5, -10, 0, 2.5, -10, -1, 0, -3, -1, 2.5, -3, -1, 0, -10, -1, 0, -10, -1, 2.5, -3, -1, 2.5, -3, 0, 0, -10, 0, 2.5, -10, 0, 0, -3, 0, 0, -3, 0, 2.5, -10, 0, 2.5)
@@ -3501,8 +3787,8 @@ render_priority = 0
 next_pass = SubResource("ShaderMaterial_4hdjy")
 shader = ExtResource("3_ixj0m")
 shader_parameter/emission = Color(0, 0, 0, 1)
-shader_parameter/emission_energy = 1.0
-shader_parameter/color = Color(0.9160622, 0.7722766, 0.58169824, 1)
+shader_parameter/emission_energy = 0.0
+shader_parameter/color = Color(0.5943452, 0.4940501, 0.35680404, 1)
 shader_parameter/specular = Color(0.17163703, 0.17163706, 0.171637, 0.5019608)
 shader_parameter/fresnel = Color(0.12834382, 0.12834373, 0.12834373, 0.3019608)
 shader_parameter/uv_scale = Vector2(1, 1)
@@ -3913,53 +4199,109 @@ surface_material_override/1 = SubResource("StandardMaterial3D_abo5s")
 
 [node name="Camera_001" parent="Pillar" index="0"]
 mesh = SubResource("ArrayMesh_6emw1")
+surface_material_override/0 = SubResource("ShaderMaterial_rpt5s")
+surface_material_override/1 = SubResource("ShaderMaterial_4jh2b")
+surface_material_override/2 = SubResource("ShaderMaterial_kxusd")
+surface_material_override/3 = SubResource("ShaderMaterial_1tpiw")
 
 [node name="Camera_002" parent="Pillar" index="1"]
 mesh = SubResource("ArrayMesh_mgrwt")
+surface_material_override/0 = SubResource("ShaderMaterial_rpt5s")
+surface_material_override/1 = SubResource("ShaderMaterial_4jh2b")
+surface_material_override/2 = SubResource("ShaderMaterial_kxusd")
+surface_material_override/3 = SubResource("ShaderMaterial_1tpiw")
 
 [node name="Camera_003" parent="Pillar" index="2"]
 mesh = SubResource("ArrayMesh_h7yb4")
+surface_material_override/0 = SubResource("ShaderMaterial_rpt5s")
+surface_material_override/1 = SubResource("ShaderMaterial_4jh2b")
+surface_material_override/2 = SubResource("ShaderMaterial_kxusd")
+surface_material_override/3 = SubResource("ShaderMaterial_1tpiw")
 
 [node name="Camera_004" parent="Pillar" index="3"]
 mesh = SubResource("ArrayMesh_qbbdc")
+surface_material_override/0 = SubResource("ShaderMaterial_rpt5s")
+surface_material_override/1 = SubResource("ShaderMaterial_4jh2b")
+surface_material_override/2 = SubResource("ShaderMaterial_kxusd")
+surface_material_override/3 = SubResource("ShaderMaterial_1tpiw")
 
 [node name="Camera_005" parent="Pillar" index="4"]
 mesh = SubResource("ArrayMesh_3exhb")
+surface_material_override/0 = SubResource("ShaderMaterial_rpt5s")
+surface_material_override/1 = SubResource("ShaderMaterial_4jh2b")
+surface_material_override/2 = SubResource("ShaderMaterial_kxusd")
+surface_material_override/3 = SubResource("ShaderMaterial_1tpiw")
 
 [node name="Camera_006" parent="Pillar" index="5"]
 mesh = SubResource("ArrayMesh_1vnqh")
+surface_material_override/0 = SubResource("ShaderMaterial_rpt5s")
+surface_material_override/1 = SubResource("ShaderMaterial_4jh2b")
+surface_material_override/2 = SubResource("ShaderMaterial_kxusd")
+surface_material_override/3 = SubResource("ShaderMaterial_1tpiw")
 
 [node name="Camera_007" parent="Pillar" index="6"]
 mesh = SubResource("ArrayMesh_byisx")
+surface_material_override/0 = SubResource("ShaderMaterial_rpt5s")
+surface_material_override/1 = SubResource("ShaderMaterial_4jh2b")
+surface_material_override/2 = SubResource("ShaderMaterial_kxusd")
+surface_material_override/3 = SubResource("ShaderMaterial_1tpiw")
 
 [node name="CollisionShape3D" parent="Pillar/StaticBody3D" index="0"]
 shape = SubResource("ConcavePolygonShape3D_uu6f1")
 
 [node name="Pillar_001" parent="." index="1"]
 mesh = SubResource("ArrayMesh_awmhr")
-surface_material_override/0 = SubResource("ORMMaterial3D_vvkum")
-surface_material_override/1 = SubResource("StandardMaterial3D_ixj0m")
+surface_material_override/0 = SubResource("ShaderMaterial_16htk")
+surface_material_override/1 = SubResource("StandardMaterial3D_0dsmk")
 
 [node name="Camera_008" parent="Pillar_001" index="0"]
 mesh = SubResource("ArrayMesh_qeuqe")
+surface_material_override/0 = SubResource("ShaderMaterial_pvgl6")
+surface_material_override/1 = SubResource("ShaderMaterial_eg3jy")
+surface_material_override/2 = SubResource("ShaderMaterial_n58ej")
+surface_material_override/3 = SubResource("ShaderMaterial_h87iw")
 
 [node name="Camera_009" parent="Pillar_001" index="1"]
 mesh = SubResource("ArrayMesh_u3h2d")
+surface_material_override/0 = SubResource("ShaderMaterial_pvgl6")
+surface_material_override/1 = SubResource("ShaderMaterial_eg3jy")
+surface_material_override/2 = SubResource("ShaderMaterial_n58ej")
+surface_material_override/3 = SubResource("ShaderMaterial_h87iw")
 
 [node name="Camera_010" parent="Pillar_001" index="2"]
 mesh = SubResource("ArrayMesh_fs0vt")
+surface_material_override/0 = SubResource("ShaderMaterial_pvgl6")
+surface_material_override/1 = SubResource("ShaderMaterial_eg3jy")
+surface_material_override/2 = SubResource("ShaderMaterial_n58ej")
+surface_material_override/3 = SubResource("ShaderMaterial_h87iw")
 
 [node name="Camera_011" parent="Pillar_001" index="3"]
 mesh = SubResource("ArrayMesh_dohw2")
+surface_material_override/0 = SubResource("ShaderMaterial_pvgl6")
+surface_material_override/1 = SubResource("ShaderMaterial_eg3jy")
+surface_material_override/2 = SubResource("ShaderMaterial_n58ej")
+surface_material_override/3 = SubResource("ShaderMaterial_h87iw")
 
 [node name="Camera_012" parent="Pillar_001" index="4"]
 mesh = SubResource("ArrayMesh_t7na2")
+surface_material_override/0 = SubResource("ShaderMaterial_pvgl6")
+surface_material_override/1 = SubResource("ShaderMaterial_eg3jy")
+surface_material_override/2 = SubResource("ShaderMaterial_n58ej")
+surface_material_override/3 = SubResource("ShaderMaterial_h87iw")
 
 [node name="Camera_013" parent="Pillar_001" index="5"]
 mesh = SubResource("ArrayMesh_147ic")
+surface_material_override/0 = SubResource("ShaderMaterial_pvgl6")
+surface_material_override/1 = SubResource("ShaderMaterial_eg3jy")
+surface_material_override/2 = SubResource("ShaderMaterial_n58ej")
+surface_material_override/3 = SubResource("ShaderMaterial_h87iw")
 
 [node name="Camera_014" parent="Pillar_001" index="6"]
 mesh = SubResource("ArrayMesh_adrfc")
+surface_material_override/0 = SubResource("ShaderMaterial_pvgl6")
+surface_material_override/1 = SubResource("ShaderMaterial_eg3jy")
+surface_material_override/2 = SubResource("ShaderMaterial_n58ej")
+surface_material_override/3 = SubResource("ShaderMaterial_h87iw")
 
 [node name="CollisionShape3D" parent="Pillar_001/StaticBody3D" index="0"]
 shape = SubResource("ConcavePolygonShape3D_ebd0n")
@@ -3971,24 +4313,52 @@ surface_material_override/1 = SubResource("StandardMaterial3D_171vo")
 
 [node name="Camera_015" parent="Pillar_002" index="0"]
 mesh = SubResource("ArrayMesh_y0e8h")
+surface_material_override/0 = SubResource("ShaderMaterial_m44nw")
+surface_material_override/1 = SubResource("ShaderMaterial_8y4u7")
+surface_material_override/2 = SubResource("ShaderMaterial_t5dya")
+surface_material_override/3 = SubResource("ShaderMaterial_1luh6")
 
 [node name="Camera_016" parent="Pillar_002" index="1"]
 mesh = SubResource("ArrayMesh_e7ntp")
+surface_material_override/0 = SubResource("ShaderMaterial_m44nw")
+surface_material_override/1 = SubResource("ShaderMaterial_8y4u7")
+surface_material_override/2 = SubResource("ShaderMaterial_t5dya")
+surface_material_override/3 = SubResource("ShaderMaterial_1luh6")
 
 [node name="Camera_017" parent="Pillar_002" index="2"]
 mesh = SubResource("ArrayMesh_wqw14")
+surface_material_override/0 = SubResource("ShaderMaterial_m44nw")
+surface_material_override/1 = SubResource("ShaderMaterial_8y4u7")
+surface_material_override/2 = SubResource("ShaderMaterial_t5dya")
+surface_material_override/3 = SubResource("ShaderMaterial_1luh6")
 
 [node name="Camera_018" parent="Pillar_002" index="3"]
 mesh = SubResource("ArrayMesh_yfjs0")
+surface_material_override/0 = SubResource("ShaderMaterial_m44nw")
+surface_material_override/1 = SubResource("ShaderMaterial_8y4u7")
+surface_material_override/2 = SubResource("ShaderMaterial_t5dya")
+surface_material_override/3 = SubResource("ShaderMaterial_1luh6")
 
 [node name="Camera_019" parent="Pillar_002" index="4"]
 mesh = SubResource("ArrayMesh_qviru")
+surface_material_override/0 = SubResource("ShaderMaterial_m44nw")
+surface_material_override/1 = SubResource("ShaderMaterial_8y4u7")
+surface_material_override/2 = SubResource("ShaderMaterial_t5dya")
+surface_material_override/3 = SubResource("ShaderMaterial_1luh6")
 
 [node name="Camera_020" parent="Pillar_002" index="5"]
 mesh = SubResource("ArrayMesh_fqoty")
+surface_material_override/0 = SubResource("ShaderMaterial_m44nw")
+surface_material_override/1 = SubResource("ShaderMaterial_8y4u7")
+surface_material_override/2 = SubResource("ShaderMaterial_t5dya")
+surface_material_override/3 = SubResource("ShaderMaterial_1luh6")
 
 [node name="Camera_021" parent="Pillar_002" index="6"]
 mesh = SubResource("ArrayMesh_ft20s")
+surface_material_override/0 = SubResource("ShaderMaterial_m44nw")
+surface_material_override/1 = SubResource("ShaderMaterial_8y4u7")
+surface_material_override/2 = SubResource("ShaderMaterial_t5dya")
+surface_material_override/3 = SubResource("ShaderMaterial_1luh6")
 
 [node name="CollisionShape3D" parent="Pillar_002/StaticBody3D" index="0"]
 shape = SubResource("ConcavePolygonShape3D_piq6o")
@@ -4000,24 +4370,52 @@ surface_material_override/1 = SubResource("StandardMaterial3D_vghge")
 
 [node name="Camera_022" parent="Pillar_003" index="0"]
 mesh = SubResource("ArrayMesh_fnycg")
+surface_material_override/0 = SubResource("ShaderMaterial_4oy28")
+surface_material_override/1 = SubResource("ShaderMaterial_do4u7")
+surface_material_override/2 = SubResource("ShaderMaterial_xbey2")
+surface_material_override/3 = SubResource("ShaderMaterial_qhlnq")
 
 [node name="Camera_023" parent="Pillar_003" index="1"]
 mesh = SubResource("ArrayMesh_dxqse")
+surface_material_override/0 = SubResource("ShaderMaterial_4oy28")
+surface_material_override/1 = SubResource("ShaderMaterial_do4u7")
+surface_material_override/2 = SubResource("ShaderMaterial_xbey2")
+surface_material_override/3 = SubResource("ShaderMaterial_qhlnq")
 
 [node name="Camera_024" parent="Pillar_003" index="2"]
 mesh = SubResource("ArrayMesh_8qnj2")
+surface_material_override/0 = SubResource("ShaderMaterial_4oy28")
+surface_material_override/1 = SubResource("ShaderMaterial_do4u7")
+surface_material_override/2 = SubResource("ShaderMaterial_xbey2")
+surface_material_override/3 = SubResource("ShaderMaterial_qhlnq")
 
 [node name="Camera_025" parent="Pillar_003" index="3"]
 mesh = SubResource("ArrayMesh_eg4ix")
+surface_material_override/0 = SubResource("ShaderMaterial_4oy28")
+surface_material_override/1 = SubResource("ShaderMaterial_do4u7")
+surface_material_override/2 = SubResource("ShaderMaterial_xbey2")
+surface_material_override/3 = SubResource("ShaderMaterial_qhlnq")
 
 [node name="Camera_026" parent="Pillar_003" index="4"]
 mesh = SubResource("ArrayMesh_yvxap")
+surface_material_override/0 = SubResource("ShaderMaterial_4oy28")
+surface_material_override/1 = SubResource("ShaderMaterial_do4u7")
+surface_material_override/2 = SubResource("ShaderMaterial_xbey2")
+surface_material_override/3 = SubResource("ShaderMaterial_qhlnq")
 
 [node name="Camera_027" parent="Pillar_003" index="5"]
 mesh = SubResource("ArrayMesh_j7fep")
+surface_material_override/0 = SubResource("ShaderMaterial_4oy28")
+surface_material_override/1 = SubResource("ShaderMaterial_do4u7")
+surface_material_override/2 = SubResource("ShaderMaterial_xbey2")
+surface_material_override/3 = SubResource("ShaderMaterial_qhlnq")
 
 [node name="Camera_028" parent="Pillar_003" index="6"]
 mesh = SubResource("ArrayMesh_b7le6")
+surface_material_override/0 = SubResource("ShaderMaterial_4oy28")
+surface_material_override/1 = SubResource("ShaderMaterial_do4u7")
+surface_material_override/2 = SubResource("ShaderMaterial_xbey2")
+surface_material_override/3 = SubResource("ShaderMaterial_qhlnq")
 
 [node name="CollisionShape3D" parent="Pillar_003/StaticBody3D" index="0"]
 shape = SubResource("ConcavePolygonShape3D_5amw2")

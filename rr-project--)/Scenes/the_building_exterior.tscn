@@ -1,0 +1,100 @@
+[gd_scene load_steps=14 format=3 uid="uid://nr564qys3hhv"]
+
+[ext_resource type="PackedScene" uid="uid://cxq4j0yvblo00" path="res://3D Assets/The Building Exterior.glb" id="1_xry8b"]
+[ext_resource type="Shader" uid="uid://y4065hfn1gg1" path="res://src/outline.gdshader" id="2_jqsiu"]
+[ext_resource type="Shader" uid="uid://bnppj1irt8q5j" path="res://src/cel-shader-base.gdshader" id="3_qfdgo"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_onn2m"]
+render_priority = 0
+shader = ExtResource("2_jqsiu")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dd5ky"]
+render_priority = 0
+next_pass = SubResource("ShaderMaterial_onn2m")
+shader = ExtResource("3_qfdgo")
+shader_parameter/emission = Color(0, 0, 0, 1)
+shader_parameter/emission_energy = 1.0
+shader_parameter/color = Color(0.47975755, 0.47098857, 0.4651509, 1)
+shader_parameter/specular = Color(0.3, 0.3, 0.3, 0.5)
+shader_parameter/fresnel = Color(0.2, 0.2, 0.2, 0.3)
+shader_parameter/uv_scale = Vector2(1, 1)
+shader_parameter/uv_offset = Vector2(0, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qfdgo"]
+render_priority = 0
+shader = ExtResource("2_jqsiu")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jqsiu"]
+render_priority = 0
+next_pass = SubResource("ShaderMaterial_qfdgo")
+shader = ExtResource("3_qfdgo")
+shader_parameter/emission = Color(0, 0, 0, 1)
+shader_parameter/emission_energy = 1.0
+shader_parameter/color = Color(0.25483334, 0.25481215, 0.23727843, 1)
+shader_parameter/specular = Color(0.3, 0.3, 0.3, 0.5)
+shader_parameter/fresnel = Color(0.2, 0.2, 0.2, 0.3)
+shader_parameter/uv_scale = Vector2(1, 1)
+shader_parameter/uv_offset = Vector2(0, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_51llt"]
+render_priority = 0
+shader = ExtResource("2_jqsiu")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pahqd"]
+render_priority = 0
+next_pass = SubResource("ShaderMaterial_51llt")
+shader = ExtResource("3_qfdgo")
+shader_parameter/emission = Color(0, 0, 0, 1)
+shader_parameter/emission_energy = 1.0
+shader_parameter/color = Color(0.2809068, 0.2835502, 0.2907932, 1)
+shader_parameter/specular = Color(0.3, 0.3, 0.3, 0.5)
+shader_parameter/fresnel = Color(0.2, 0.2, 0.2, 0.3)
+shader_parameter/uv_scale = Vector2(1, 1)
+shader_parameter/uv_offset = Vector2(0, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nmmf6"]
+render_priority = 0
+shader = ExtResource("2_jqsiu")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5ii62"]
+render_priority = 0
+next_pass = SubResource("ShaderMaterial_nmmf6")
+shader = ExtResource("3_qfdgo")
+shader_parameter/emission = Color(0, 0, 0, 1)
+shader_parameter/emission_energy = 1.0
+shader_parameter/color = Color(0.43666062, 0.37358814, 3.85046e-07, 1)
+shader_parameter/specular = Color(0.3, 0.3, 0.3, 0.5)
+shader_parameter/fresnel = Color(0.2, 0.2, 0.2, 0.3)
+shader_parameter/uv_scale = Vector2(1, 1)
+shader_parameter/uv_offset = Vector2(0, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hrmhn"]
+render_priority = 0
+shader = ExtResource("2_jqsiu")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7ntmq"]
+render_priority = 0
+next_pass = SubResource("ShaderMaterial_hrmhn")
+shader = ExtResource("3_qfdgo")
+shader_parameter/emission = Color(0, 0, 0, 1)
+shader_parameter/emission_energy = 1.0
+shader_parameter/color = Color(0.437, 0.374, 0, 1)
+shader_parameter/specular = Color(0.3, 0.3, 0.3, 0.5)
+shader_parameter/fresnel = Color(0.2, 0.2, 0.2, 0.3)
+shader_parameter/uv_scale = Vector2(1, 1)
+shader_parameter/uv_offset = Vector2(0, 0)
+
+[node name="The Building Exterior" instance=ExtResource("1_xry8b")]
+
+[node name="Road(Temp Model)" parent="." index="0"]
+surface_material_override/0 = SubResource("ShaderMaterial_dd5ky")
+surface_material_override/1 = SubResource("ShaderMaterial_jqsiu")
+
+[node name="Exterior wall(Temp Model)" parent="." index="1"]
+surface_material_override/0 = SubResource("ShaderMaterial_pahqd")
+
+[node name="Gate(Temp Model)" parent="." index="2"]
+surface_material_override/0 = SubResource("ShaderMaterial_5ii62")
+
+[node name="Upper Gate (Temp Model)" parent="." index="3"]
+surface_material_override/0 = SubResource("ShaderMaterial_7ntmq")
