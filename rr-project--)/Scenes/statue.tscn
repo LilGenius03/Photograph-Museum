@@ -166,10 +166,33 @@ transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
 surface_material_override/0 = SubResource("ShaderMaterial_ufaa2")
 
 [node name="Camera" parent="." index="1"]
+transform = Transform3D(-0.38909996, -0.43012396, -0.25893372, -0.2599694, 0.6514421, 0.35997975, 0.006427779, 0.31018803, -1.1150641, 0.5484034, 3.2529242, 0.47273624)
 surface_material_override/0 = SubResource("ShaderMaterial_627nv")
 surface_material_override/1 = SubResource("ShaderMaterial_wqvp3")
 surface_material_override/2 = SubResource("ShaderMaterial_76tv8")
 surface_material_override/3 = SubResource("ShaderMaterial_verre")
+
+[node name="Skeleton3D" parent="Armature" index="0"]
+bones/2/rotation = Quaternion(-0.6648613, -0.059113547, -0.27800262, 0.69078195)
+bones/3/rotation = Quaternion(-0.19452694, 0.081078455, -0.40957537, 0.8876)
+bones/4/rotation = Quaternion(-0.18909012, 0.028268086, -0.3310516, 0.9240404)
+bones/5/rotation = Quaternion(-0.0076757036, -0.1919517, -0.018410133, 0.9812017)
+bones/6/rotation = Quaternion(0.10305606, 0.25679725, 0.20334873, 0.9391932)
+bones/8/rotation = Quaternion(0.7570715, -0.017050691, -0.26942906, 0.5949454)
+bones/9/rotation = Quaternion(0.11689038, -0.22069755, -0.4133996, 0.8756312)
+bones/10/rotation = Quaternion(-0.13170245, -0.11486533, -0.33391738, 0.9262611)
+bones/11/rotation = Quaternion(0.2685799, 0.001603788, -0.032850865, 0.96269584)
+bones/13/rotation = Quaternion(-0.0017691451, 0.005310285, -0.092574395, 0.9956901)
+bones/14/rotation = Quaternion(0.9994873, 0.026060008, 0.003557084, -0.018261716)
+bones/15/rotation = Quaternion(-0.00025862423, 0.0050050607, 0.0027463518, 0.99998367)
+bones/16/rotation = Quaternion(0.9996277, 0.026361233, -0.0050950325, 0.004857109)
+bones/17/rotation = Quaternion(-0.0025243182, -0.0054362444, 0.0024356025, 0.9999791)
+bones/18/position = Vector3(0.11272865, -2.1513553, -0.32551512)
+bones/18/rotation = Quaternion(0.7754132, 0.4937476, 0.20025407, -0.3388892)
+bones/19/position = Vector3(0.11175015, -2.114231, 0.3069364)
+bones/20/position = Vector3(0.83543766, 0.73371905, -0.19054925)
+bones/20/rotation = Quaternion(-0.48695004, -0.48695004, -0.51271796, 0.512718)
+bones/21/position = Vector3(0.82885826, 0.6813835, 0.14557242)
 
 [node name="Body" parent="Armature/Skeleton3D" index="0"]
 surface_material_override/0 = SubResource("ShaderMaterial_218gy")

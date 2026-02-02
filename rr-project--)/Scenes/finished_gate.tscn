@@ -1,0 +1,185 @@
+[gd_scene load_steps=23 format=3 uid="uid://b3uu2p4fpfx8m"]
+
+[ext_resource type="PackedScene" uid="uid://bhl11wqfr17x0" path="res://3D Assets/Finished Gate.glb" id="1_80p3j"]
+[ext_resource type="Shader" uid="uid://bnppj1irt8q5j" path="res://src/cel-shader-base.gdshader" id="2_6p357"]
+[ext_resource type="Shader" uid="uid://y4065hfn1gg1" path="res://src/outline.gdshader" id="2_oi521"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_yqqqp"]
+render_priority = 0
+shader = ExtResource("2_6p357")
+shader_parameter/emission = Color(0, 0, 0, 1)
+shader_parameter/emission_energy = 1.0
+shader_parameter/color = Color(0.282402, 0.50936854, 0.5857364, 1)
+shader_parameter/specular = Color(0.3, 0.3, 0.3, 0.5)
+shader_parameter/fresnel = Color(0.2, 0.2, 0.2, 0.3)
+shader_parameter/uv_scale = Vector2(1, 1)
+shader_parameter/uv_offset = Vector2(0, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xys1b"]
+render_priority = 0
+shader = ExtResource("2_oi521")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_oi521"]
+render_priority = 0
+next_pass = SubResource("ShaderMaterial_xys1b")
+shader = ExtResource("2_6p357")
+shader_parameter/emission = Color(0, 0, 0, 1)
+shader_parameter/emission_energy = -0.14
+shader_parameter/color = Color(0.30123684, 0.53948486, 0.42989963, 1)
+shader_parameter/specular = Color(0.3, 0.3, 0.3, 0.5)
+shader_parameter/fresnel = Color(0.2, 0.2, 0.2, 0.3)
+shader_parameter/uv_scale = Vector2(1, 1)
+shader_parameter/uv_offset = Vector2(0, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_p5uhy"]
+render_priority = 0
+shader = ExtResource("2_oi521")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xqi2t"]
+render_priority = 0
+next_pass = SubResource("ShaderMaterial_p5uhy")
+shader = ExtResource("2_6p357")
+shader_parameter/emission = Color(0, 0, 0, 1)
+shader_parameter/emission_energy = 1.0
+shader_parameter/color = Color(0.33707008, 0.43980926, 0.7186247, 1)
+shader_parameter/specular = Color(0.3, 0.3, 0.3, 0.46666667)
+shader_parameter/fresnel = Color(0.16445974, 0.16445976, 0.16445974, 0.3019608)
+shader_parameter/uv_scale = Vector2(1, 1)
+shader_parameter/uv_offset = Vector2(0, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dk8d6"]
+render_priority = 0
+shader = ExtResource("2_oi521")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gh5f0"]
+render_priority = 0
+next_pass = SubResource("ShaderMaterial_dk8d6")
+shader = ExtResource("2_6p357")
+shader_parameter/emission = Color(0, 0, 0, 1)
+shader_parameter/emission_energy = 1.0
+shader_parameter/color = Color(0.8856474, 0, 0.13937747, 1)
+shader_parameter/specular = Color(0.3, 0.3, 0.3, 0.5)
+shader_parameter/fresnel = Color(0.2, 0.2, 0.2, 0.3)
+shader_parameter/uv_scale = Vector2(1, 1)
+shader_parameter/uv_offset = Vector2(0, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_n6ka5"]
+render_priority = 0
+shader = ExtResource("2_oi521")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wwiwy"]
+render_priority = 0
+next_pass = SubResource("ShaderMaterial_n6ka5")
+shader = ExtResource("2_6p357")
+shader_parameter/emission = Color(0, 0, 0, 1)
+shader_parameter/emission_energy = 1.0
+shader_parameter/color = Color(0.6743978, 0.3977023, 7.70092e-07, 1)
+shader_parameter/specular = Color(0.3, 0.3, 0.3, 0.5)
+shader_parameter/fresnel = Color(0.2, 0.2, 0.2, 0.3)
+shader_parameter/uv_scale = Vector2(1, 1)
+shader_parameter/uv_offset = Vector2(0, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8kv8o"]
+render_priority = 0
+shader = ExtResource("2_oi521")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_yg7q8"]
+render_priority = 0
+next_pass = SubResource("ShaderMaterial_8kv8o")
+shader = ExtResource("2_6p357")
+shader_parameter/emission = Color(0, 0, 0, 1)
+shader_parameter/emission_energy = 1.0
+shader_parameter/color = Color(0.47241664, 0.47515643, 0.45591438, 1)
+shader_parameter/specular = Color(0.3, 0.3, 0.3, 0.7921569)
+shader_parameter/fresnel = Color(0.2, 0.2, 0.2, 0.6745098)
+shader_parameter/uv_scale = Vector2(1, 1)
+shader_parameter/uv_offset = Vector2(0, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ixsdr"]
+render_priority = 0
+shader = ExtResource("2_oi521")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ae7jo"]
+render_priority = 0
+next_pass = SubResource("ShaderMaterial_ixsdr")
+shader = ExtResource("2_6p357")
+shader_parameter/emission = Color(0, 0, 0, 1)
+shader_parameter/emission_energy = 1.0
+shader_parameter/color = Color(0.60785735, 0.43940172, 0, 1)
+shader_parameter/specular = Color(0.3, 0.3, 0.3, 0.7058824)
+shader_parameter/fresnel = Color(0.2, 0.2, 0.2, 0.60784316)
+shader_parameter/uv_scale = Vector2(1, 1)
+shader_parameter/uv_offset = Vector2(0, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_g42ik"]
+render_priority = 0
+shader = ExtResource("2_oi521")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4arj3"]
+render_priority = 0
+next_pass = SubResource("ShaderMaterial_g42ik")
+shader = ExtResource("2_6p357")
+shader_parameter/emission = Color(0, 0, 0, 1)
+shader_parameter/emission_energy = 1.0
+shader_parameter/color = Color(0.6819446, 0.56406456, 0.48452228, 1)
+shader_parameter/specular = Color(0.3, 0.3, 0.3, 0.827451)
+shader_parameter/fresnel = Color(0.2, 0.2, 0.2, 0.65882355)
+shader_parameter/uv_scale = Vector2(1, 1)
+shader_parameter/uv_offset = Vector2(0, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_i3xwn"]
+render_priority = 0
+shader = ExtResource("2_oi521")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_say5w"]
+render_priority = 0
+next_pass = SubResource("ShaderMaterial_i3xwn")
+shader = ExtResource("2_6p357")
+shader_parameter/emission = Color(0, 0, 0, 1)
+shader_parameter/emission_energy = 1.0
+shader_parameter/color = Color(0.7246727, 0.6236445, 3.85046e-07, 1)
+shader_parameter/specular = Color(0.3, 0.3, 0.3, 0.7372549)
+shader_parameter/fresnel = Color(0.2, 0.2, 0.2, 0.4392157)
+shader_parameter/uv_scale = Vector2(1, 1)
+shader_parameter/uv_offset = Vector2(0, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pkj2x"]
+render_priority = 0
+shader = ExtResource("2_oi521")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3ws5y"]
+render_priority = 0
+next_pass = SubResource("ShaderMaterial_pkj2x")
+shader = ExtResource("2_6p357")
+shader_parameter/emission = Color(0, 0, 0, 1)
+shader_parameter/emission_energy = 1.0
+shader_parameter/color = Color(0.73476166, 0.50993395, 0, 1)
+shader_parameter/specular = Color(0.3, 0.3, 0.3, 0.78431374)
+shader_parameter/fresnel = Color(0.2, 0.2, 0.2, 0.5411765)
+shader_parameter/uv_scale = Vector2(1, 1)
+shader_parameter/uv_offset = Vector2(0, 0)
+
+[node name="Finished Gate" instance=ExtResource("1_80p3j")]
+
+[node name="Floor" parent="." index="0"]
+surface_material_override/0 = SubResource("ShaderMaterial_yqqqp")
+
+[node name="Gate" parent="." index="1"]
+surface_material_override/0 = SubResource("ShaderMaterial_oi521")
+surface_material_override/1 = SubResource("ShaderMaterial_xqi2t")
+surface_material_override/2 = SubResource("ShaderMaterial_gh5f0")
+surface_material_override/3 = SubResource("ShaderMaterial_wwiwy")
+
+[node name="Locks" parent="." index="2"]
+transform = Transform3D(0, 0.5986635, 0, 0, 0, -0.5986635, -0.5986635, 0, 0, -0.33818674, 4.857393, -0.37699723)
+surface_material_override/0 = SubResource("ShaderMaterial_yg7q8")
+surface_material_override/1 = SubResource("ShaderMaterial_ae7jo")
+
+[node name="Metal_Gate" parent="." index="3"]
+surface_material_override/0 = SubResource("ShaderMaterial_4arj3")
+
+[node name="Spikes" parent="." index="4"]
+surface_material_override/0 = SubResource("ShaderMaterial_say5w")
+
+[node name="Boarder" parent="." index="5"]
+surface_material_override/0 = SubResource("ShaderMaterial_3ws5y")

@@ -10,9 +10,9 @@
 [ext_resource type="PackedScene" uid="uid://jvaixsi5jp3g" path="res://Scenes/post_process.tscn" id="7_0xmwb"]
 [ext_resource type="PackedScene" uid="uid://br3chl1eajpp3" path="res://Scenes/the_building.tscn" id="9_hvgs0"]
 [ext_resource type="PackedScene" uid="uid://e1klugkjsb7n" path="res://3D Assets/The Building ramp.glb" id="11_42ixf"]
-[ext_resource type="PackedScene" uid="uid://nr564qys3hhv" path="res://Scenes/the_building_exterior.tscn" id="12_4xw51"]
 [ext_resource type="PackedScene" uid="uid://dlnw7jlb8pdhx" path="res://Scenes/muesum_signs.tscn" id="12_wfmop"]
 [ext_resource type="PackedScene" uid="uid://bthfyoldpmksb" path="res://Scenes/statue.tscn" id="13_4xw51"]
+[ext_resource type="PackedScene" uid="uid://b3uu2p4fpfx8m" path="res://Scenes/finished_gate.tscn" id="13_mss8p"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_mss8p"]
 panorama = ExtResource("2_iwebx")
@@ -34,8 +34,7 @@ environment = SubResource("Environment_wrrm3")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
-light_color = Color(0.8203659, 0.82036585, 0.8203658, 1)
-light_energy = 0.407
+light_specular = 0.066
 shadow_enabled = true
 
 [node name="PictureFormat" type="Node3D" parent="."]
@@ -111,7 +110,7 @@ vertical_alignment = 1
 autowrap_mode = 2
 
 [node name="Player" parent="." node_paths=PackedStringArray("inspect_ui", "inspect_label", "PressF_label", "inspect_image") instance=ExtResource("2_y36bi")]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0.56630516, 0.13326573, 9.709859)
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0.56630516, 0.8453331, 1.7098589)
 inspect_ui = NodePath("../PictureFormat/PictureCanvas/PictureFormat")
 inspect_label = NodePath("../PictureFormat/PictureCanvas/PictureFormat/VBoxContainer/Label")
 PressF_label = NodePath("../PictureFormat/PictureCanvas/PressF")
@@ -284,7 +283,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.10147095, -0.003962517, 0)
 [node name="Rachels Museum" parent="Signs" instance=ExtResource("12_wfmop")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 4, 1, -9)
 
-[node name="The Building Exterior" parent="." instance=ExtResource("12_4xw51")]
-
 [node name="Statue" parent="." instance=ExtResource("13_4xw51")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 1, 1, -26)
+
+[node name="Finished Gate" parent="." instance=ExtResource("13_mss8p")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1, 0.03664112, 11)
