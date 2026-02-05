@@ -10,7 +10,7 @@ func _play_click():
 
 func _on_start_pressed() -> void:
 	_play_click()
-	get_tree().change_scene_to_file("res://Scenes/the_museum.tscn")
+	_trigger_flash_and_change_scene()
 
 
 func _on_style_switch_pressed() -> void:
@@ -22,3 +22,15 @@ func _on_style_switch_pressed() -> void:
 func _on_quit_pressed() -> void:
 	_play_click()
 	get_tree().quit()
+	
+func _trigger_flash_and_change_scene():
+	var flash = $"../Flash"
+	flash.visible = true
+	flash.modulate = Color.WHITE
+	flash.modulate.a = 0.0
+
+	var tween = get_tree().create_tween()
+	tween.tween_property(flash, "modulate:a", 2.0, 0.5) #fade out
+	tween.tween_property(flash, "modulate:a", 1.0, 0.2) #fade in
+	await tween.finished
+	get_tree().call_deferred("change_scene_to_file","res://Scenes/the_museum.tscn" )
