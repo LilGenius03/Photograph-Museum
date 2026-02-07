@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://be2po12ge3fgd"]
+[gd_scene load_steps=3 format=3 uid="uid://be2po12ge3fgd"]
 
 [ext_resource type="Script" uid="uid://cfmet218xxrv2" path="res://Scenes/PictureFormat.gd" id="1_1f6b4"]
+[ext_resource type="FontFile" uid="uid://c0adg1xh4w50b" path="res://Font/Moralana DEMO.otf" id="1_nk1eg"]
 
 [node name="PictureFormat" type="Node3D"]
 
@@ -29,6 +30,7 @@ offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.8350884, 0.07665766, 0.48068243, 1)
+theme_override_fonts/font = ExtResource("1_nk1eg")
 text = "Press F to Inspect"
 horizontal_alignment = 1
 
