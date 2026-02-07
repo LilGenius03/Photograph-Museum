@@ -1,6 +1,7 @@
-[gd_scene load_steps=15 format=3 uid="uid://hxrx1ywr8waw"]
+[gd_scene load_steps=16 format=3 uid="uid://hxrx1ywr8waw"]
 
 [ext_resource type="PackedScene" uid="uid://br3chl1eajpp3" path="res://Scenes/the_building.tscn" id="1_jujwo"]
+[ext_resource type="Texture2D" uid="uid://ctsiky7upq6rn" path="res://Skyboxes/city Skybox.jpg" id="1_l0o4n"]
 [ext_resource type="Script" uid="uid://c2jhumoh88lse" path="res://Scenes/main_menu.gd" id="2_4ua4o"]
 [ext_resource type="Shader" uid="uid://cji6v3efgg4wv" path="res://Picture Frames/Material/post_process.gdshader" id="3_cicbh"]
 [ext_resource type="Texture2D" uid="uid://blh7iwx2uls3a" path="res://UI/UI Menu Not Pressed.png" id="3_ir5th"]
@@ -10,17 +11,18 @@
 [ext_resource type="AudioStream" uid="uid://bic1bllb0wpgc" path="res://Sounds/Sounds/Main Menu click sound.wav" id="5_u6pmn"]
 [ext_resource type="FontFile" uid="uid://c0adg1xh4w50b" path="res://Font/Moralana DEMO.otf" id="6_cvv3w"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_4ua4o"]
-sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
-ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_2ybig"]
+panorama = ExtResource("1_l0o4n")
 
-[sub_resource type="Sky" id="Sky_cicbh"]
-sky_material = SubResource("ProceduralSkyMaterial_4ua4o")
+[sub_resource type="Sky" id="Sky_1rvsp"]
+sky_material = SubResource("PanoramaSkyMaterial_2ybig")
 
 [sub_resource type="Environment" id="Environment_ir5th"]
 background_mode = 2
-sky = SubResource("Sky_cicbh")
+sky = SubResource("Sky_1rvsp")
+reflected_light_source = 2
 tonemap_mode = 2
+tonemap_exposure = 0.7
 glow_enabled = true
 
 [sub_resource type="FontVariation" id="FontVariation_l0o4n"]

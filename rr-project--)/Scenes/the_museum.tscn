@@ -5,16 +5,14 @@
 [ext_resource type="Texture2D" uid="uid://ctsiky7upq6rn" path="res://Skyboxes/city Skybox.jpg" id="2_iwebx"]
 [ext_resource type="PackedScene" uid="uid://csh3ima41r61x" path="res://Scenes/Player.tscn" id="2_y36bi"]
 [ext_resource type="PackedScene" uid="uid://xwahwqi8uha3" path="res://Picture Frames/PictureFrame.tscn" id="3_q2tkb"]
-[ext_resource type="Texture2D" uid="uid://cxuj5a65puwq" path="res://Test Images/horizontal image.jpg" id="4_vufhw"]
-[ext_resource type="Texture2D" uid="uid://dqlqkxw67jij" path="res://Test Images/choice-variation-concept.webp" id="5_nwqag"]
-[ext_resource type="Texture2D" uid="uid://7oou4gywocn0" path="res://Test Images/Vertical Image.jpg" id="6_yl61k"]
 [ext_resource type="PackedScene" uid="uid://jvaixsi5jp3g" path="res://Scenes/post_process.tscn" id="7_0xmwb"]
 [ext_resource type="Texture2D" uid="uid://vrafms746jht" path="res://Rachels Photos/FernhillPark-16.jpg" id="7_2b1c7"]
 [ext_resource type="Texture2D" uid="uid://nlklscpodetn" path="res://Rachels Photos/IMGP5866.JPG" id="8_0cuio"]
-[ext_resource type="Texture2D" uid="uid://7cinmkelkb2a" path="res://Rachels Photos/Print Cath 1.jpg" id="8_pf2pn"]
+[ext_resource type="Texture2D" uid="uid://uwu15t8s43ur" path="res://Rachels Photos/Screenshot_20231029_154121_Photos.jpg" id="9_8wokb"]
 [ext_resource type="Texture2D" uid="uid://dg8mcjm0cfekm" path="res://Rachels Photos/Barnaculia Magazine-4.JPG" id="9_d17vh"]
 [ext_resource type="PackedScene" uid="uid://br3chl1eajpp3" path="res://Scenes/the_building.tscn" id="9_hvgs0"]
 [ext_resource type="Texture2D" uid="uid://digfa1m0q6676" path="res://Rachels Photos/Barnaculia Magazine-5.JPG" id="10_7wt3u"]
+[ext_resource type="Texture2D" uid="uid://cmwveib6vhxs8" path="res://Rachels Photos/Screenshot_20231029_142803_Photos.jpg" id="10_8wokb"]
 [ext_resource type="Texture2D" uid="uid://by1cmulcksaei" path="res://Rachels Photos/FernhillPark-22.jpg" id="11_2b1c7"]
 [ext_resource type="PackedScene" uid="uid://e1klugkjsb7n" path="res://3D Assets/The Building ramp.glb" id="11_42ixf"]
 [ext_resource type="Texture2D" uid="uid://c2u8lda2mvrcn" path="res://Rachels Photos/Wicklow Botanic July 25-2.jpg" id="12_0cuio"]
@@ -24,10 +22,12 @@
 [ext_resource type="PackedScene" uid="uid://b3uu2p4fpfx8m" path="res://Scenes/finished_gate.tscn" id="13_mss8p"]
 [ext_resource type="Texture2D" uid="uid://bcvew6uc83lqk" path="res://Rachels Photos/Wicklow Botanic July 25-3.jpg" id="13_t41w2"]
 [ext_resource type="Texture2D" uid="uid://dorfoo0p8c5o3" path="res://Rachels Photos/Screenshot_20240421_175843_Drive.jpg" id="14_jgqgn"]
+[ext_resource type="Texture2D" uid="uid://ck8ugultie154" path="res://Rachels Photos/fernhill 2024-14.jpg" id="14_jo8nh"]
 [ext_resource type="Texture2D" uid="uid://dn120nr2yj0kl" path="res://Rachels Photos/Screenshot_20240421_175635_Drive.jpg" id="15_jo8nh"]
 [ext_resource type="Texture2D" uid="uid://b5flte28juuk4" path="res://Rachels Photos/Rachel First Draft.JPG" id="20_jo8nh"]
 [ext_resource type="Texture2D" uid="uid://ba2jrqkixn6wo" path="res://Rachels Photos/Rachel First Draft 3.JPG" id="21_t41w2"]
 [ext_resource type="Texture2D" uid="uid://bl0vju54cl8vj" path="res://Rachels Photos/Val calender 22.jpg" id="22_jgqgn"]
+[ext_resource type="Texture2D" uid="uid://cngvlk48hsp8x" path="res://Rachels Photos/Screenshot_20231029_113141_Photos.jpg" id="23_8wokb"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_mss8p"]
 panorama = ExtResource("2_iwebx")
@@ -39,7 +39,9 @@ sky_material = SubResource("PanoramaSkyMaterial_mss8p")
 background_mode = 2
 sky = SubResource("Sky_mss8p")
 tonemap_mode = 2
+tonemap_exposure = 0.7
 glow_enabled = true
+adjustment_brightness = 0.82
 
 [node name="The Museum" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 3, -6)
@@ -49,6 +51,7 @@ environment = SubResource("Environment_wrrm3")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+light_color = Color(0.8631336, 0.74376494, 0.69560605, 1)
 light_specular = 0.066
 shadow_enabled = true
 
@@ -150,64 +153,43 @@ description_text = "A white Cosmo found alone in the wild, beautifully contraste
 image_texture = ExtResource("8_0cuio")
 
 [node name="Picture_Frame20" parent="PictureFramesGroup" instance=ExtResource("3_q2tkb")]
-transform = Transform3D(-4, 0, -6.039832e-07, 0, 4, 0, 6.039832e-07, 0, -4, 8.923044, 4.6708956, -34)
-image_texture = ExtResource("4_vufhw")
-
-[node name="Picture_Frame21" parent="PictureFramesGroup" instance=ExtResource("3_q2tkb")]
-transform = Transform3D(-4, 0, -6.039832e-07, 0, 4, 0, 6.039832e-07, 0, -4, 8.923044, 4.6708956, -40)
-description_text = "Beautiful girl"
-image_texture = ExtResource("6_yl61k")
-
-[node name="Picture_Frame22" parent="PictureFramesGroup" instance=ExtResource("3_q2tkb")]
-transform = Transform3D(4, 0, 6.993822e-07, 0, 4, 0, -6.993822e-07, 0, 4, -8.901755, 4.6708956, -40)
-image_texture = ExtResource("4_vufhw")
+transform = Transform3D(-4, 0, -6.039832e-07, 0, 4, 0, 6.039832e-07, 0, -4, 8.923044, 4.6708956, -36)
+description_text = "A sunny evening in Wexford, walking with a dog, this scene brings out the pure joy of Irish summers"
+image_texture = ExtResource("9_8wokb")
 
 [node name="Picture_Frame23" parent="PictureFramesGroup" instance=ExtResource("3_q2tkb")]
-transform = Transform3D(4, 0, 6.993822e-07, 0, 4, 0, -6.993822e-07, 0, 4, -8.901755, 4.6708956, -34)
-description_text = "Beautiful girl"
-image_texture = ExtResource("6_yl61k")
-
-[node name="Picture_Frame24" parent="PictureFramesGroup" instance=ExtResource("3_q2tkb")]
-transform = Transform3D(4, 0, 6.993822e-07, 0, 4, 0, -6.993822e-07, 0, 4, -8.901755, 4.6708956, -56)
-image_texture = ExtResource("8_pf2pn")
+transform = Transform3D(4, 0, 6.993822e-07, 0, 4, 0, -6.993822e-07, 0, 4, -8.93113, 4.6708956, -36)
+description_text = "Her cat Sparkles, such green eyes!"
+image_texture = ExtResource("10_8wokb")
 
 [node name="Picture_Frame28" parent="PictureFramesGroup" instance=ExtResource("3_q2tkb")]
 transform = Transform3D(3.019916e-07, 0, -4, 0, 4, 0, 4, 0, 3.019916e-07, -3.9017553, 4.6708956, -58.9523)
 image_texture = ExtResource("9_d17vh")
 
 [node name="Picture_Frame29" parent="PictureFramesGroup" instance=ExtResource("3_q2tkb")]
-transform = Transform3D(3.019916e-07, 0, -4, 0, 4, 0, 4, 0, 3.019916e-07, 6.0982447, 4.6708956, -58.9523)
+transform = Transform3D(3.019916e-07, 0, -4, 0, 4, 0, 4, 0, 3.019916e-07, 9.098245, 4.6708956, -58.9523)
 image_texture = ExtResource("10_7wt3u")
 
 [node name="Picture_Frame30" parent="PictureFramesGroup" instance=ExtResource("3_q2tkb")]
-transform = Transform3D(3.019916e-07, 0, -4, 0, 4, 0, 4, 0, 3.019916e-07, 17.098244, 4.6708956, -58.9523)
+transform = Transform3D(3.019916e-07, 0, -4, 0, 4, 0, 4, 0, 3.019916e-07, 21.098244, 4.6708956, -58.9523)
 image_texture = ExtResource("11_2b1c7")
-
-[node name="Picture_Frame31" parent="PictureFramesGroup" instance=ExtResource("3_q2tkb")]
-transform = Transform3D(3.019916e-07, 0, -4, 0, 4, 0, 4, 0, 3.019916e-07, 26.098244, 4.6708956, -58.9523)
-image_texture = ExtResource("8_pf2pn")
 
 [node name="Picture_Frame32" parent="PictureFramesGroup" instance=ExtResource("3_q2tkb")]
 transform = Transform3D(-6.5168274e-07, 0, 4, 0, 4, 0, -4, 0, -6.5168274e-07, 23.098244, 4.6708956, -46.03629)
-image_texture = ExtResource("12_d17vh")
+image_texture = ExtResource("14_jo8nh")
 
 [node name="Picture_Frame33" parent="PictureFramesGroup" instance=ExtResource("3_q2tkb")]
 transform = Transform3D(-6.5168274e-07, 0, 4, 0, 4, 0, -4, 0, -6.5168274e-07, 14.098244, 4.6708956, -46.03629)
 image_texture = ExtResource("12_0cuio")
 
 [node name="Picture_Frame25" parent="PictureFramesGroup" instance=ExtResource("3_q2tkb")]
-transform = Transform3D(4, 0, 6.993822e-07, 0, 4, 0, -6.993822e-07, 0, 4, -8.901755, 4.6708956, -48)
+transform = Transform3D(4, 0, 6.993822e-07, 0, 4, 0, -6.993822e-07, 0, 4, -8.901755, 4.6708956, -52)
 description_text = "Beautiful girl"
 image_texture = ExtResource("13_t41w2")
 
 [node name="Picture_Frame26" parent="PictureFramesGroup" instance=ExtResource("3_q2tkb")]
-transform = Transform3D(-4, 0, -6.039832e-07, 0, 4, 0, 6.039832e-07, 0, -4, 28.935963, 4.6708956, -48)
+transform = Transform3D(-4, 0, -6.039832e-07, 0, 4, 0, 6.039832e-07, 0, -4, 28.935963, 4.6708956, -52)
 image_texture = ExtResource("14_jgqgn")
-
-[node name="Picture_Frame27" parent="PictureFramesGroup" instance=ExtResource("3_q2tkb")]
-transform = Transform3D(-4, 0, -6.039832e-07, 0, 4, 0, 6.039832e-07, 0, -4, 28.935963, 4.6708956, -56)
-description_text = "Beautiful girl"
-image_texture = ExtResource("15_jo8nh")
 
 [node name="Picture_Frame4" parent="PictureFramesGroup" instance=ExtResource("3_q2tkb")]
 transform = Transform3D(-1.7484555e-07, 0, 4, 0, 4, 0, -4, 0, -1.7484555e-07, 15.923044, 4.6708956, -21.07574)
@@ -226,18 +208,18 @@ image_texture = ExtResource("22_jgqgn")
 
 [node name="Picture_Frame19" parent="PictureFramesGroup" instance=ExtResource("3_q2tkb")]
 transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -22.926662, 4.6708956, -25.492493)
-description_text = "Beautiful girl"
-image_texture = ExtResource("5_nwqag")
+description_text = "What a beautfiul day on Irelands Beaches captured wonderfull by Rachel Ritchie, it makes me want to swim in the sea."
+image_texture = ExtResource("23_8wokb")
 
 [node name="Picture_Frame13" parent="PictureFramesGroup" instance=ExtResource("3_q2tkb")]
 transform = Transform3D(-1.7484555e-07, 0, 4, 0, 4, 0, -4, 0, -1.7484555e-07, -16.076956, 4.6708956, -21.07574)
-description_text = "Beautiful girl"
-image_texture = ExtResource("5_nwqag")
+description_text = "A green rusted handle, so bright and colourful still showing that true beauty comes from age."
+image_texture = ExtResource("15_jo8nh")
 
 [node name="Picture_Frame16" parent="PictureFramesGroup" instance=ExtResource("3_q2tkb")]
 transform = Transform3D(-1.7484555e-07, 0, -4, 0, 4, 0, 4, 0, -1.7484555e-07, -16.076956, 4.6708956, -29.928974)
-description_text = "Beautiful girl"
-image_texture = ExtResource("5_nwqag")
+description_text = "A garden walkway captured sideways, this symbolises the unorthadox way nature works."
+image_texture = ExtResource("12_d17vh")
 
 [node name="The Building ramp" parent="." instance=ExtResource("11_42ixf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.10147095, -0.003962517, 0)
