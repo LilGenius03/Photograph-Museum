@@ -11,6 +11,7 @@ script = ExtResource("1_rpqav")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." groups=["Player"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+cast_shadow = 0
 mesh = SubResource("CapsuleMesh_fhlb6")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
