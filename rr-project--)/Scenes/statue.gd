@@ -1,7 +1,7 @@
 extends Node3D
 
 @onready var state_machine = $AnimationTree["parameters/playback"]
-
+@export var Control_Node: Control
 func _ready():
 	$AnimationTree.active = true
 	state_machine.travel("Idle")
@@ -30,3 +30,13 @@ func _trigger_flash_and_change_scene():
 func _on_animation_tree_animation_finished(anim_name: StringName) -> void:
 	if anim_name == "Taking_photo":
 		_trigger_flash_and_change_scene()
+
+
+func _on_area_3d_body_entered(body: Node3D) -> void:
+	if body.name == "Player":
+		Control_Node.visible = true
+
+
+func _on_area_3d_body_exited(body: Node3D) -> void:
+	if body.name == "Player":
+		Control_Node.visible = false

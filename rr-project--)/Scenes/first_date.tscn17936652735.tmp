@@ -1136,12 +1136,10 @@ mesh = SubResource("PlaneMesh_goksq")
 skeleton = NodePath("")
 
 [node name="Area3D" type="Area3D" parent="." node_paths=PackedStringArray("Control_node")]
-transform = Transform3D(0.9659258, 0, -0.25881904, 0, 1, 0, 0.25881904, 0, 0.9659258, 0.9322739, 2.618718, -3.479294)
 script = ExtResource("15_q1cg2")
 Control_node = NodePath("PressT")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(1.925, 0, 0, 0, 1.925, 0, 0, 0, 1.925, 1.4342367e-08, 0, -0.76034844)
 shape = SubResource("SphereShape3D_q1cg2")
 
 [node name="PressT" type="Control" parent="Area3D"]
@@ -1172,14 +1170,6 @@ theme_override_fonts/font = ExtResource("11_45jns")
 theme_override_font_sizes/font_size = 91
 text = "Press T to go back to Museum"
 horizontal_alignment = 1
-
-[node name="FlashOverlay" type="ColorRect" parent="."]
-visible = false
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
 
 [connection signal="body_entered" from="Picture_Frame/Area3D" to="Picture_Frame" method="_on_area_3d_body_entered"]
 [connection signal="body_exited" from="Picture_Frame/Area3D" to="Picture_Frame" method="_on_area_3d_body_exited"]

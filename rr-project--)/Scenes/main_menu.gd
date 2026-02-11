@@ -1,7 +1,8 @@
 extends Node2D
 @onready var button_sound: AudioStreamPlayer = $PostProcess/Style_Switch
 @onready var post_processing := $PostProcess/CanvasLayer/ScreenFilter
-
+@onready var Controls := $Controls
+@onready var Main_menu := $Button_Manager/VBoxContainer
 func _ready() -> void:
 	pass # Replace with function body.
 
@@ -34,3 +35,13 @@ func _trigger_flash_and_change_scene():
 	tween.tween_property(flash, "modulate:a", 1.0, 0.2) #fade in
 	await tween.finished
 	get_tree().call_deferred("change_scene_to_file","res://Scenes/the_museum.tscn" )
+
+
+func _on_controls_pressed() -> void:
+	Controls.visible = true
+	Main_menu.visible = false
+
+
+func _on_return_pressed() -> void:
+	Controls.visible = false
+	Main_menu.visible = true

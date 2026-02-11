@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://bjtin1vqe3th7"]
+[gd_scene load_steps=32 format=3 uid="uid://bjtin1vqe3th7"]
 
 [ext_resource type="Script" uid="uid://cfmet218xxrv2" path="res://Scenes/PictureFormat.gd" id="1_nwqag"]
 [ext_resource type="FontFile" uid="uid://c0adg1xh4w50b" path="res://Font/Moralana DEMO.otf" id="2_7wt3u"]
@@ -41,6 +41,9 @@ tonemap_mode = 2
 tonemap_exposure = 0.7
 glow_enabled = true
 adjustment_brightness = 0.82
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_jgqgn"]
+radius = 3.0
 
 [node name="The Museum" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 3, -6)
@@ -231,8 +234,47 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.10147095, -0.003962517, 0)
 
 [node name="The Building" parent="." instance=ExtResource("9_hvgs0")]
 
-[node name="Statue" parent="." instance=ExtResource("13_4xw51")]
+[node name="Statue" parent="." node_paths=PackedStringArray("Control_Node") instance=ExtResource("13_4xw51")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 1, 1, -26)
+Control_Node = NodePath("Area3D/PressT")
+
+[node name="Area3D" type="Area3D" parent="Statue"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Statue/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3710496, 0)
+shape = SubResource("SphereShape3D_jgqgn")
+
+[node name="PressT" type="Control" parent="Statue/Area3D"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Lets go on a date" type="Label" parent="Statue/Area3D/PressT"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -346.0
+offset_top = 164.0
+offset_right = 346.0
+offset_bottom = 279.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.46679616, 0.6106514, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_7wt3u")
+theme_override_font_sizes/font_size = 91
+text = "Press T for a Date!"
+horizontal_alignment = 1
 
 [node name="Finished Gate" parent="." instance=ExtResource("13_mss8p")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1, 0.03664112, 11)
+
+[connection signal="body_entered" from="Statue/Area3D" to="Statue" method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="Statue/Area3D" to="Statue" method="_on_area_3d_body_exited"]
