@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://hxrx1ywr8waw"]
+[gd_scene load_steps=17 format=3 uid="uid://hxrx1ywr8waw"]
 
 [ext_resource type="PackedScene" uid="uid://br3chl1eajpp3" path="res://Scenes/the_building.tscn" id="1_jujwo"]
 [ext_resource type="Texture2D" uid="uid://ctsiky7upq6rn" path="res://Skyboxes/city Skybox.jpg" id="1_l0o4n"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://dxcg6bqa416xe" path="res://UI/Main Menu UI Hover.png" id="5_cvv3w"]
 [ext_resource type="AudioStream" uid="uid://bic1bllb0wpgc" path="res://Sounds/Sounds/Main Menu click sound.wav" id="5_u6pmn"]
 [ext_resource type="FontFile" uid="uid://c0adg1xh4w50b" path="res://Font/Moralana DEMO.otf" id="6_cvv3w"]
+[ext_resource type="Texture2D" uid="uid://pdb4ps4d0840" path="res://UI/Controls.png" id="11_2ybig"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_2ybig"]
 panorama = ExtResource("1_l0o4n")
@@ -196,44 +197,19 @@ offset_top = 14.0
 offset_right = 470.0
 offset_bottom = 655.0
 
-[node name="Titles" type="Label" parent="Main Menu/Controls"]
+[node name="TextureRect" type="TextureRect" parent="Main Menu/Controls"]
 layout_mode = 0
-offset_right = 470.0
-offset_bottom = 641.0
-theme_override_colors/font_color = Color(0.84705883, 0.6392157, 0.84705883, 1)
-theme_override_fonts/font = ExtResource("6_cvv3w")
-theme_override_font_sizes/font_size = 76
-text = "Movement
-
-
-Style Switch"
-horizontal_alignment = 1
-
-[node name="Buttons" type="Label" parent="Main Menu/Controls"]
-layout_mode = 0
-offset_right = 470.0
-offset_bottom = 641.0
-theme_override_colors/font_color = Color(0.84892964, 0.640846, 0.84681517, 1)
-theme_override_fonts/font = ExtResource("6_cvv3w")
-theme_override_font_sizes/font_size = 51
-text = "
-
-WASD = Move
-
-
-
-Tab = Style Switch
-
-
-"
-horizontal_alignment = 1
+offset_top = 108.0
+offset_right = 643.0
+offset_bottom = 468.0
+texture = ExtResource("11_2ybig")
 
 [node name="Return" type="TextureButton" parent="Main Menu/Controls"]
 layout_mode = 0
-offset_left = 54.999992
-offset_top = 458.0
-offset_right = 1975.0
-offset_bottom = 1538.0
+offset_left = 89.0
+offset_top = 403.00003
+offset_right = 2009.0
+offset_bottom = 1483.0
 scale = Vector2(0.145, 0.145)
 texture_normal = ExtResource("3_ir5th")
 texture_pressed = ExtResource("4_u6pmn")
@@ -251,7 +227,7 @@ theme_override_colors/font_outline_color = Color(0.44632256, 0.69653976, 1, 1)
 theme_override_constants/outline_size = 30
 theme_override_fonts/font = SubResource("FontVariation_l0o4n")
 theme_override_font_sizes/font_size = 191
-text = "Controls"
+text = "Return"
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(0.59719545, 0.33707374, 0.7278317, -0.037903238, 0.91825813, -0.3941641, -0.80119973, 0.2078058, 0.5611558, 9, 0.7390585, 8.43379)

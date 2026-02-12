@@ -1,4 +1,4 @@
-[gd_scene load_steps=88 format=4 uid="uid://d27ve0btuhudf"]
+[gd_scene load_steps=86 format=4 uid="uid://d27ve0btuhudf"]
 
 [ext_resource type="PackedScene" uid="uid://csh3ima41r61x" path="res://Scenes/Player.tscn" id="1_2ef8y"]
 [ext_resource type="Texture2D" uid="uid://day1doks086nl" path="res://Skyboxes/Night Version.png" id="1_hnr5n"]
@@ -11,9 +11,9 @@
 [ext_resource type="Texture2D" uid="uid://cxfvljeekcks1" path="res://3D Assets/First_Date Table_CandleFlame.webp" id="6_hnr5n"]
 [ext_resource type="Texture2D" uid="uid://bitnxsjqsxd6o" path="res://Textures/dark gray_NORM.jpg" id="7_01cy4"]
 [ext_resource type="FontFile" uid="uid://c0adg1xh4w50b" path="res://Font/Moralana DEMO.otf" id="11_45jns"]
-[ext_resource type="Script" uid="uid://tx4uaj5f64o1" path="res://Scenes/picture_Interaction.gd" id="11_cwkm6"]
 [ext_resource type="Script" uid="uid://cfmet218xxrv2" path="res://Scenes/PictureFormat.gd" id="12_cwkm6"]
 [ext_resource type="Texture2D" uid="uid://duusm6dtbv3bt" path="res://UI/Card.png" id="14_ftsbb"]
+[ext_resource type="Script" uid="uid://b2qo5qpxywnvp" path="res://Scenes/ValentinesDayCard.gd" id="14_q1cg2"]
 [ext_resource type="Script" uid="uid://b1xbmupxoc1a7" path="res://Scenes/PressT.gd" id="15_q1cg2"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_fpvww"]
@@ -910,11 +910,6 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_h4ma5")
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_ftsbb"]
-radius = 1.0
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_goksq"]
-
 [sub_resource type="SphereShape3D" id="SphereShape3D_q1cg2"]
 
 [node name="First_Date" type="Node3D"]
@@ -1097,12 +1092,19 @@ stretch_mode = 5
 
 [node name="Label" type="Label" parent="PictureFormat/PictureCanvas/PictureFormat"]
 layout_mode = 0
-offset_right = 1152.0
-offset_bottom = 647.0
+offset_left = 292.0
+offset_top = 95.0
+offset_right = 879.0
+offset_bottom = 630.0
 theme_override_colors/font_color = Color(1, 0.78793687, 0.99579924, 1)
 theme_override_fonts/font = ExtResource("11_45jns")
-theme_override_font_sizes/font_size = 46
-text = "Dear Rachel
+theme_override_font_sizes/font_size = 28
+text = "Dear Rachel,
+Your the first girl I met that made me truly understand what it means to truly love someone, you shine brighter than any diamond when your in a room, your simple gestures exemplify your kind soul and your photos of us capture pure love and happiness. 
+
+I love you so much Rachel have the most magical Valentines day 
+
+Love Finn 
 "
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -1115,25 +1117,6 @@ layout_mode = 0
 offset_right = 1152.0
 offset_bottom = 272.075
 color = Color(0.45292348, 0.6064231, 0.99776846, 0.43529412)
-
-[node name="Picture_Frame" type="Node3D" parent="." groups=["Player"]]
-transform = Transform3D(-0.2588191, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, -0.2588191, 0.40573117, 1.2927474, -1.5142089)
-script = ExtResource("11_cwkm6")
-description_text = "Dear Rachel"
-image_texture = ExtResource("14_ftsbb")
-
-[node name="Area3D" type="Area3D" parent="Picture_Frame"]
-transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0.2601123, -0.013826132, -0.0052628405)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Picture_Frame/Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14520589, 0, -0.013063803)
-shape = SubResource("SphereShape3D_ftsbb")
-
-[node name="Picture_Mesh" type="MeshInstance3D" parent="Picture_Frame"]
-transform = Transform3D(-0.6999999, -5.9604645e-08, 6.1195934e-08, -6.119594e-08, 3.0597963e-08, -0.7, 5.9604645e-08, -0.6999999, -3.059797e-08, 0.2601123, -0.013826132, -0.0052628517)
-visible = false
-mesh = SubResource("PlaneMesh_goksq")
-skeleton = NodePath("")
 
 [node name="Area3D" type="Area3D" parent="." node_paths=PackedStringArray("Control_node")]
 transform = Transform3D(0.9659258, 0, -0.25881904, 0, 1, 0, 0.25881904, 0, 0.9659258, 0.9322739, 2.618718, -3.479294)
@@ -1173,6 +1156,45 @@ theme_override_font_sizes/font_size = 91
 text = "Press T to go back to Museum"
 horizontal_alignment = 1
 
+[node name="Card Trigger" type="Area3D" parent="." node_paths=PackedStringArray("Card", "PressF")]
+transform = Transform3D(0.9659258, 0, -0.25881904, 0, 1, 0, 0.25881904, 0, 0.9659258, 0.20766012, 1.0662556, -0.77499855)
+script = ExtResource("14_q1cg2")
+Card = NodePath("../PictureFormat/PictureCanvas/PictureFormat")
+PressF = NodePath("../PictureFormat/PictureCanvas/PressF")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Card Trigger"]
+transform = Transform3D(1.925, 0, 0, 0, 1.925, 0, 0, 0, 1.925, 1.4342367e-08, 0, -0.76034844)
+shape = SubResource("SphereShape3D_q1cg2")
+
+[node name="PressT" type="Control" parent="Card Trigger"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Press T to Interact" type="Label" parent="Card Trigger/PressT"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -346.0
+offset_top = 164.0
+offset_right = 346.0
+offset_bottom = 279.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.46679616, 0.6106514, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_45jns")
+theme_override_font_sizes/font_size = 91
+text = "Press T to go back to Museum"
+horizontal_alignment = 1
+
 [node name="FlashOverlay" type="ColorRect" parent="."]
 visible = false
 anchors_preset = 15
@@ -1181,7 +1203,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[connection signal="body_entered" from="Picture_Frame/Area3D" to="Picture_Frame" method="_on_area_3d_body_entered"]
-[connection signal="body_exited" from="Picture_Frame/Area3D" to="Picture_Frame" method="_on_area_3d_body_exited"]
 [connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]
 [connection signal="body_exited" from="Area3D" to="Area3D" method="_on_body_exited"]
+[connection signal="body_entered" from="Card Trigger" to="Card Trigger" method="_on_body_entered"]
+[connection signal="body_exited" from="Card Trigger" to="Card Trigger" method="_on_body_exited"]
