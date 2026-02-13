@@ -40,8 +40,10 @@ func _trigger_flash_and_change_scene():
 func _on_controls_pressed() -> void:
 	Controls.visible = true
 	Main_menu.visible = false
+	_play_click()
 
 
 func _on_return_pressed() -> void:
 	Controls.visible = false
 	Main_menu.visible = true
+	_play_click()

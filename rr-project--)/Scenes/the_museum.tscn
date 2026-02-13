@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=4 uid="uid://bjtin1vqe3th7"]
+[gd_scene load_steps=41 format=4 uid="uid://bjtin1vqe3th7"]
 
 [ext_resource type="Script" uid="uid://cfmet218xxrv2" path="res://Scenes/PictureFormat.gd" id="1_nwqag"]
 [ext_resource type="FontFile" uid="uid://c0adg1xh4w50b" path="res://Font/Moralana DEMO.otf" id="2_7wt3u"]
@@ -43,6 +43,9 @@ tonemap_mode = 2
 tonemap_exposure = 0.7
 glow_enabled = true
 adjustment_brightness = 0.82
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8wokb"]
+size = Vector3(2, 13, 18.427612)
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_jgqgn"]
 radius = 3.0
@@ -295,6 +298,27 @@ image_texture = ExtResource("12_d17vh")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.10147095, -0.003962517, 0)
 
 [node name="The Building" parent="." instance=ExtResource("9_hvgs0")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="The Building"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="The Building/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.09386, 6, -4)
+shape = SubResource("BoxShape3D_8wokb")
+debug_color = Color(0, 0.6, 0.69803923, 1)
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="The Building"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="The Building/StaticBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.079987, 6, -4)
+shape = SubResource("BoxShape3D_8wokb")
+debug_color = Color(0, 0.6, 0.69803923, 1)
+
+[node name="StaticBody3D3" type="StaticBody3D" parent="The Building"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="The Building/StaticBody3D3"]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.57192993, 6, 3.6258574)
+shape = SubResource("BoxShape3D_8wokb")
+debug_color = Color(0, 0.6, 0.69803923, 1)
 
 [node name="Statue" parent="." node_paths=PackedStringArray("Control_Node") instance=ExtResource("13_4xw51")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 1, 1, -26)

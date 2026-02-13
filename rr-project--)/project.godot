@@ -11,8 +11,13 @@ config_version=5
 [application]
 
 config/name="RR Project :)"
-run/main_scene="uid://bjtin1vqe3th7"
+run/main_scene="uid://hxrx1ywr8waw"
 config/features=PackedStringArray("4.5", "Forward Plus")
+
+[display]
+
+window/size/mode=3
+window/stretch/mode="canvas_items"
 
 [editor_plugins]
 

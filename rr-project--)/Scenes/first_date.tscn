@@ -1,4 +1,4 @@
-[gd_scene load_steps=86 format=4 uid="uid://d27ve0btuhudf"]
+[gd_scene load_steps=90 format=4 uid="uid://d27ve0btuhudf"]
 
 [ext_resource type="PackedScene" uid="uid://csh3ima41r61x" path="res://Scenes/Player.tscn" id="1_2ef8y"]
 [ext_resource type="Texture2D" uid="uid://day1doks086nl" path="res://Skyboxes/Night Version.png" id="1_hnr5n"]
@@ -569,7 +569,7 @@ render_priority = 0
 next_pass = SubResource("ShaderMaterial_janu7")
 shader = ExtResource("6_01cy4")
 shader_parameter/normal_scale = 1.0
-shader_parameter/color = Color(0.48393318, 0.2879809, 0.22610125, 1)
+shader_parameter/color = Color(0.5559003, 0.49592352, 0.28220353, 1)
 shader_parameter/specular = Color(0.3, 0.3, 0.3, 0.5)
 shader_parameter/fresnel = Color(0.2, 0.2, 0.2, 0.3)
 shader_parameter/uv_scale = Vector2(1, 1)
@@ -584,7 +584,7 @@ render_priority = 0
 next_pass = SubResource("ShaderMaterial_lnttq")
 shader = ExtResource("6_01cy4")
 shader_parameter/normal_scale = 1.0
-shader_parameter/color = Color(0.41716322, 0.0012766201, 0.61183965, 1)
+shader_parameter/color = Color(0.6877906, 0.6566605, 0.6152093, 1)
 shader_parameter/specular = Color(0.3, 0.3, 0.3, 0.5)
 shader_parameter/fresnel = Color(0.2, 0.2, 0.2, 0.3)
 shader_parameter/uv_scale = Vector2(1, 1)
@@ -599,7 +599,7 @@ render_priority = 0
 next_pass = SubResource("ShaderMaterial_xy7l5")
 shader = ExtResource("6_01cy4")
 shader_parameter/normal_scale = 1.0
-shader_parameter/color = Color(0.35167322, 0.34816912, 0.34816918, 1)
+shader_parameter/color = Color(0.53380615, 0.61028415, 0.80807316, 1)
 shader_parameter/specular = Color(0.3, 0.3, 0.3, 0.5)
 shader_parameter/fresnel = Color(0.2, 0.2, 0.2, 0.3)
 shader_parameter/uv_scale = Vector2(1, 1)
@@ -910,6 +910,36 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_h4ma5")
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8owhi"]
+render_priority = 0
+shader = ExtResource("5_34fpy")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_m4wbi"]
+render_priority = 0
+next_pass = SubResource("ShaderMaterial_8owhi")
+shader = ExtResource("6_01cy4")
+shader_parameter/normal_scale = 1.0
+shader_parameter/color = Color(0.94127, 0, 0.2009134, 1)
+shader_parameter/specular = Color(0.3, 0.3, 0.3, 0.5)
+shader_parameter/fresnel = Color(0.2, 0.2, 0.2, 0.3)
+shader_parameter/uv_scale = Vector2(1, 1)
+shader_parameter/uv_offset = Vector2(0, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_p2yhv"]
+render_priority = 0
+shader = ExtResource("5_34fpy")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_cq3x6"]
+render_priority = 0
+next_pass = SubResource("ShaderMaterial_p2yhv")
+shader = ExtResource("6_01cy4")
+shader_parameter/normal_scale = 1.0
+shader_parameter/color = Color(0.51128715, 0.5427039, 0.5076781, 1)
+shader_parameter/specular = Color(0.3, 0.3, 0.3, 0.5)
+shader_parameter/fresnel = Color(0.2, 0.2, 0.2, 0.3)
+shader_parameter/uv_scale = Vector2(1, 1)
+shader_parameter/uv_offset = Vector2(0, 0)
+
 [sub_resource type="SphereShape3D" id="SphereShape3D_q1cg2"]
 radius = 0.3659317
 
@@ -991,7 +1021,7 @@ surface_material_override/1 = SubResource("ShaderMaterial_swl7x")
 shape = SubResource("ConcavePolygonShape3D_cfemd")
 
 [node name="Cylinder_001" type="MeshInstance3D" parent="First_Date Table"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25881913, 5.2999988, 0.96592575)
+transform = Transform3D(1.51, 0, 0, 0, 1.51, 0, 0, 0, 1.51, 0.25881913, 5.2203374, 0.96592575)
 mesh = SubResource("ArrayMesh_i8kxm")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("ShaderMaterial_srq8m")
@@ -999,8 +1029,9 @@ surface_material_override/1 = SubResource("ShaderMaterial_8f2o0")
 surface_material_override/3 = SubResource("ShaderMaterial_afdyl")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="First_Date Table/Cylinder_001"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.53587484, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.471354, 0)
 light_color = Color(0.87947124, 0.6881767, 0.8466605, 1)
+light_energy = 0.341
 
 [node name="candle holder" type="MeshInstance3D" parent="First_Date Table"]
 transform = Transform3D(1.719293, 0, 1.5277541, 0, 2.3, 0, -1.5277541, 0, 1.719293, 0.013894461, 1.1647702, 1.001796)
@@ -1022,6 +1053,7 @@ skeleton = NodePath("")
 [node name="OmniLight3D" type="OmniLight3D" parent="First_Date Table/candle holder/Candle_001"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.047370553, 0)
 light_color = Color(0.8776157, 0.8776158, 0.8776157, 1)
+light_energy = 2.053
 omni_range = 0.371
 omni_attenuation = 0.259
 omni_shadow_mode = 0
@@ -1030,6 +1062,8 @@ omni_shadow_mode = 0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.6864963e-05, 3.6904957, 3.2276711)
 mesh = SubResource("ArrayMesh_f10j6")
 skeleton = NodePath("")
+surface_material_override/0 = SubResource("ShaderMaterial_m4wbi")
+surface_material_override/2 = SubResource("ShaderMaterial_cq3x6")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="First_Date Table/Cylinder_002"]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, -0.037077665, -0.05041013)
@@ -1093,19 +1127,19 @@ stretch_mode = 5
 
 [node name="Label" type="Label" parent="PictureFormat/PictureCanvas/PictureFormat"]
 layout_mode = 0
-offset_left = 292.0
+offset_left = 294.0
 offset_top = 95.0
-offset_right = 879.0
+offset_right = 863.0
 offset_bottom = 630.0
 theme_override_colors/font_color = Color(1, 0.78793687, 0.99579924, 1)
 theme_override_fonts/font = ExtResource("11_45jns")
 theme_override_font_sizes/font_size = 28
 text = "Dear Rachel,
-Your the first girl I met that made me truly understand what it means to truly love someone, you shine brighter than any diamond when your in a room, your simple gestures exemplify your kind soul and your photos of us capture pure love and happiness. 
+Your the first girl I met that made me understand what it means to truly love someone. You shine brighter than any diamond when your in a room, your simple gestures exemplify your kind soul and your photos of us capture pure love and happiness. 
 
 I love you so much Rachel have the most magical Valentines day 
 
-Love Finn 
+Love Finn
 "
 horizontal_alignment = 1
 vertical_alignment = 1
