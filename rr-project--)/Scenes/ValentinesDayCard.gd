@@ -13,9 +13,11 @@ func _process(delta):
 	if Input.is_action_just_pressed("Inspect") && ReadingCard == false:
 		Card.visible = true
 		ReadingCard = true
+		PressF.visible = false
 	elif Input.is_action_just_pressed("Inspect") && ReadingCard == true:
 			Card.visible = false
 			ReadingCard = false
+			PressF.visible = true
 
 
 func _on_body_entered(body: Node3D) -> void:

@@ -911,6 +911,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_h4ma5")
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_q1cg2"]
+radius = 0.3659317
 
 [node name="First_Date" type="Node3D"]
 
@@ -1124,8 +1125,9 @@ script = ExtResource("15_q1cg2")
 Control_node = NodePath("PressT")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(1.925, 0, 0, 0, 1.925, 0, 0, 0, 1.925, 1.4342367e-08, 0, -0.76034844)
+transform = Transform3D(1.925, 0, 0, 0, 1.925, 0, 0, 0, 1.925, 6.991904e-08, 0, -0.29730454)
 shape = SubResource("SphereShape3D_q1cg2")
+debug_color = Color(0, 0.6, 0.69803923, 1)
 
 [node name="PressT" type="Control" parent="Area3D"]
 visible = false
@@ -1163,8 +1165,9 @@ Card = NodePath("../PictureFormat/PictureCanvas/PictureFormat")
 PressF = NodePath("../PictureFormat/PictureCanvas/PressF")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Card Trigger"]
-transform = Transform3D(1.925, 0, 0, 0, 1.925, 0, 0, 0, 1.925, 1.4342367e-08, 0, -0.76034844)
+transform = Transform3D(1.925, 0, 0, 0, 1.925, 0, 0, 0, 1.925, 1.4342367e-08, 0, -0.46730834)
 shape = SubResource("SphereShape3D_q1cg2")
+debug_color = Color(0, 0.6, 0.69803923, 1)
 
 [node name="PressT" type="Control" parent="Card Trigger"]
 visible = false
